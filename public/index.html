@@ -12,22 +12,7 @@
   <body>
     <div class="bg-surface grid-overlay"></div>
 
-    <header class="site-header" role="banner">
-      <div class="container header-content">
-        <a href="index.html" class="brand" aria-label="NovaTech Studio home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-name">NovaTech Studio</span>
-        </a>
-        <nav class="primary-nav" aria-label="Primary">
-          <a class="nav-link" href="services.html">Services</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="portfolio.html">Portfolio</a>
-          <a class="nav-link" href="blog.html">Blog</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-          <a class="button neon-cta" href="contact.html">Let’s talk</a>
-        </nav>
-      </div>
-    </header>
+    <div data-include="header"></div>
 
     <main class="site-main" role="main">
       <!-- Hero -->
@@ -176,28 +161,7 @@
       </section>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container footer-content">
-        <div class="footer-left">
-          <span class="brand-name">NovaTech Studio</span>
-          <span class="footer-dot" aria-hidden="true">•</span>
-          <span class="footer-note">Modern Web & SEO</span>
-        </div>
-        <form class="newsletter" action="#" method="post" onsubmit="return false;">
-          <input class="input" type="email" name="email" placeholder="Email address" aria-label="Email address" required />
-          <button class="button neon-cta" type="submit">Subscribe</button>
-        </form>
-        <div class="footer-right">
-          <a class="social" href="#" aria-label="GitHub" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.4c0 5.26 3.41 9.72 8.15 11.3.6.1.82-.27.82-.6v-2.1c-3.32.74-4.02-1.6-4.02-1.6-.54-1.4-1.33-1.77-1.33-1.77-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.25 1.83 1.25 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.65-.3-5.43-1.34-5.43-5.98 0-1.32.47-2.4 1.24-3.24-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.2 11.2 0 0 1 6 0c2.3-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.92 1.23 3.24 0 4.66-2.79 5.68-5.45 5.98.43.37.81 1.1.81 2.22v3.29c0 .34.22.72.83.6A11.5 11.5 0 0 0 23.5 12.4 11.5 11.5 0 0 0 12 .5Z"/></svg></a>
-          <a class="social" href="#" aria-label="Twitter" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 6.7c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.8.5-1.7.9-2.6 1.1a3.9 3.9 0 0 0-6.7 3.5 11 11 0 0 1-8-4 3.9 3.9 0 0 0 1.2 5.2c-.6 0-1.2-.2-1.7-.5v.1a3.9 3.9 0 0 0 3.1 3.8c-.5.1-1 .2-1.6.1.4 1.3 1.6 2.3 3 2.4a7.9 7.9 0 0 1-5.8 1.6 11.1 11.1 0 0 0 6 1.8c7.2 0 11.1-6 11.1-11.1v-.5c.7-.5 1.3-1.2 1.7-2Z"/></svg></a>
-          <a class="social" href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2ZM2 8h2V22H2V8Zm6 0h2v2h.03c.28-.5 1-1.2 2.07-1.2C14.7 8.8 16 10 16 12.5V22h-2v-8.2c0-2-.7-3.3-2.3-3.3-1.2 0-1.9.8-2.2 1.6-.1.2-.1.6-.1.9V22H6V8Z"/></svg></a>
-        </div>
-        <div class="footer-meta">
-          <span class="footer-clock" id="clock" aria-live="polite"></span>
-          <span class="footer-year" id="year"></span>
-        </div>
-      </div>
-    </footer>
+    <div data-include="footer"></div>
 
     <script src="app.js" defer></script>
   </body>
