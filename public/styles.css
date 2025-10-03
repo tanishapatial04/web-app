@@ -179,6 +179,7 @@ button, input, textarea, select { font-family: inherit; }
 .social:hover { color: var(--text); background: rgba(255,255,255,.05); }
 
 /* Utilities */
+.site-main { padding: 40px 0px 40px 0px; }
 .site-main > section { padding: 50px 0; }
 .reveal { opacity: 0; transform: translateY(8px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
