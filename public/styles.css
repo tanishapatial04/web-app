@@ -146,7 +146,7 @@ button, input, textarea, select { font-family: inherit; }
 .footer-list a:hover { color: var(--accent); }
 .footer-note { color: var(--muted); }
 .footer-contact { display: grid; gap: 8px; font-style: normal; }
-.contact-row { display: grid; grid-template-columns: 24px 1fr; gap: 8px; color: var(--muted); }
+.contact-row { display: grid; gap: 8px; color: var(--muted); }
 .ci { filter: saturate(0.8); }
 .footer-note, .footer-desc, .footer-list .footer-note, .footer-note p, .footer-note small, .footer-note span, .footer-note a { color: var(--muted); }
 .footer-note, .footer-desc, .footer-note small, .footer-note p { line-height: 1.5; }
