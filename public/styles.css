@@ -87,6 +87,17 @@ button, input, textarea, select { font-family: inherit; }
 .rating { display: inline-flex; gap: 4px; color: var(--accent); }
 .star::before { content: "★"; }
 
+
+/* CTA Container */
+.cta-container {display: flex;flex-direction: column;align-items: center;max-width: 1200px;
+  margin: 0 auto;gap: 2rem;}
+.cta-text {text-align: center;}
+.cta-text h2 {font-size: 2.5rem;font-weight: bold;margin-bottom: 1rem;}
+.cta-text p {font-size: 1.125rem;margin-bottom: 1.5rem;}
+.cta-button {display: inline-block;padding: 0.75rem 1.5rem;background: linear-gradient(90deg, #7c3aed, #4f46e5);color: white;border-radius: 0.5rem;text-decoration: none;transition: transform 0.3s ease;}
+.cta-button:hover {transform: scale(1.05);}
+.cta-image img {max-width: 100%;border-radius: 0.5rem;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);}
+
 /* Forms and newsletter */
 .newsletter { display: flex; gap: 10px; align-items: center; }
 .newsletter .input { width: 220px; }
@@ -183,6 +194,13 @@ button, input, textarea, select { font-family: inherit; }
 .is-hidden { display: none !important; }
 
 /* Responsive (preserve original breakpoint) */
+
+@media (min-width: 768px) {
+  .cta-container {flex-direction: row;align-items: center;gap: 3rem;}
+  .cta-text {text-align: left;flex: 1;}
+  .cta-image {flex: 1;}
+}
+
 @media (max-width: 640px) {
   .hero-section { grid-template-columns: 1fr; }
   .card-grid, .work-grid, .testimonial-grid, .blog-grid, .service-row, .contact-grid { grid-template-columns: 1fr; }
