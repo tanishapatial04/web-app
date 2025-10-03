@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="header-bar" role="banner">
+      <div class="header-inner">
+        <h1 class="app-title">App is running</h1>
+        <span class="status-badge" aria-live="polite">OK</span>
+      </div>
+    </header>
+
+    <main class="content-area" role="main">
+      <section class="intro-panel">
+        <h2 class="section-title">Welcome</h2>
+        <p class="section-text">This project was initialized successfully. Edit files in the public folder to update this page.</p>
+      </section>
+
+      <section class="info-grid">
+        <div class="info-card">
+          <h3 class="card-title">Live Preview</h3>
+          <p class="card-text">Changes are reflected automatically. No inline styles are used; all styles come from classes.</p>
+        </div>
+        <div class="info-card">
+          <h3 class="card-title">Server</h3>
+          <p class="card-text">Static server listens on port 3000 to match the proxy target.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-bar" role="contentinfo">
+      <div class="footer-inner">
+        <span class="footer-note">Ready.</span>
+        <span class="clock" id="clock" aria-live="polite"></span>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
