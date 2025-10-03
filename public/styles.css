@@ -189,12 +189,6 @@ button, input, textarea, select { font-family: inherit; }
 .is-hidden { display: none !important; }
 
 /* Responsive (preserve original breakpoint) */
-
-@media (min-width: 768px) {
-  .cta-container {flex-direction: row;align-items: center;gap: 3rem;}
-  .cta-text {text-align: center;flex: 1;}
-}
-
 @media (max-width: 640px) {
   .hero-section { grid-template-columns: 1fr; }
   .card-grid, .work-grid, .testimonial-grid, .blog-grid, .service-row, .contact-grid { grid-template-columns: 1fr; }
