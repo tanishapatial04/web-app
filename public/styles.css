@@ -32,8 +32,6 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 .input { width: 100%; padding: 12px 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--text); outline: none; transition: box-shadow .2s ease, border-color .2s ease; }
 .input:focus { border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); box-shadow: 0 0 0 6px var(--ring); }
 .textarea { resize: vertical; }
-
-/* Ensure form controls inherit global font */
 button, input, textarea, select { font-family: inherit; }
 
 /* Hero */
@@ -81,7 +79,7 @@ button, input, textarea, select { font-family: inherit; }
 .slider-btn { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
 .slides { overflow: hidden; position: relative; }
 .slides-track { display: flex; transition: transform .5s ease; gap: 16px; }
-.testimonial-card { min-width: calc(100% - 90px); background: var(--card); border: 1px solid transparent; border-radius: 16px; padding: 16px; }
+.testimonial-card { min-width: calc(100% - 4px); background: var(--card); border: 1px solid transparent; border-radius: 16px; padding: 16px; }
 .gradient-border { background: linear-gradient(var(--card), var(--card)) padding-box, linear-gradient(135deg, rgba(59,130,246,.6), rgba(167,139,250,.6)) border-box; border: 1px solid transparent; }
 .testimonial-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
 .avatar { width: 40px; height: 40px; border-radius: 999px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 60%), linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset; display: grid; place-items: center; font-weight: 800; }
@@ -137,6 +135,36 @@ button, input, textarea, select { font-family: inherit; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); background: var(--card); }
+/* Columns layout */
+.footer-columns { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 24px; padding: 28px 20px; }
+.footer-about .footer-desc { color: var(--muted); margin: 8px 0 10px; }
+.footer-socials { display: flex; gap: 10px; }
+.footer-title { margin: 0 0 10px; font-weight: 800; font-size: 16px; }
+.footer-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer-list.compact { gap: 6px; }
+.footer-list a { color: var(--text); text-decoration: none; }
+.footer-list a:hover { color: var(--accent); }
+.footer-note { color: var(--muted); }
+.footer-contact { display: grid; gap: 8px; font-style: normal; }
+.contact-row { display: grid; grid-template-columns: 24px 1fr; gap: 8px; color: var(--muted); }
+.ci { filter: saturate(0.8); }
+.footer-note, .footer-desc, .footer-list .footer-note, .footer-note p, .footer-note small, .footer-note span, .footer-note a { color: var(--muted); }
+.footer-note, .footer-desc, .footer-note small, .footer-note p { line-height: 1.5; }
+.footer-note strong { color: var(--text); }
+.footer-list .footer-note, .footer-note { font-size: 12px; }
+.footer-note.footer-note { margin: 2px 0 0; }
+.footer-note, .footer-note a { text-decoration: none; }
+.footer-note a:hover { text-decoration: underline; }
+.footer-note, .footer-list .footer-note { display: block; }
+.footer-note, .footer-list .footer-note { color: var(--muted); }
+.footer-list li { margin: 0; }
+.footer-list li .footer-note { margin-top: 2px; }
+
+/* Bottom bar */
+.sub-footer { border-top: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); }
+.sub-footer-row { display: flex; justify-content: space-between; align-items: center; min-height: 48px; color: var(--muted); }
+
+/* Old footer utilities kept for compatibility */
 .footer-content { min-height: 72px; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 16px; }
 .footer-left { display: flex; align-items: center; gap: 8px; color: var(--muted); }
 .footer-right, .footer-meta { display: flex; align-items: center; gap: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -161,4 +189,6 @@ button, input, textarea, select { font-family: inherit; }
   .primary-nav { gap: 10px; }
   .newsletter { width: 100%; }
   .newsletter .input { width: 100%; }
+  .footer-columns { grid-template-columns: 1fr; }
+  .sub-footer-row { flex-direction: column; gap: 6px; padding: 10px 0; }
 }
