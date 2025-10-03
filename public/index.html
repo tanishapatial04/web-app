@@ -3,40 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App</title>
+    <title>NovaTech Studio — Modern Web & SEO</title>
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="header-bar" role="banner">
-      <div class="header-inner">
-        <h1 class="app-title">App is running</h1>
-        <span class="status-badge" aria-live="polite">OK</span>
+    <div class="bg-surface grid-overlay"></div>
+
+    <header class="site-header" role="banner">
+      <div class="container header-content">
+        <a href="#home" class="brand" aria-label="NovaTech Studio home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">NovaTech Studio</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#work">Portfolio</a>
+          <a class="nav-link" href="#testimonials">Testimonials</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="button neon-cta" href="#contact">Let’s talk</a>
+        </nav>
       </div>
     </header>
 
-    <main class="content-area" role="main">
-      <section class="intro-panel">
-        <h2 class="section-title">Welcome</h2>
-        <p class="section-text">This project was initialized successfully. Edit files in the public folder to update this page.</p>
+    <main id="home" class="site-main" role="main">
+      <!-- Hero -->
+      <section class="hero-section container reveal" aria-labelledby="hero-title">
+        <div class="hero-body">
+          <h1 id="hero-title" class="hero-title">
+            Building fast, secure, and scalable web experiences.
+          </h1>
+          <p class="hero-subtitle">
+            We craft WordPress and PHP solutions, boost SEO, optimize performance, and create content that ranks.
+          </p>
+          <div class="hero-actions">
+            <a class="button neon-cta" href="#services">Explore services</a>
+            <a class="button ghost-btn" href="#work">See our work</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="glow-orb orb-blue" aria-hidden="true"></div>
+          <div class="glow-orb orb-purple" aria-hidden="true"></div>
+          <div class="hero-illustration" aria-hidden="true">
+            <!-- Abstract developer illustration -->
+            <svg class="ill-dev" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-code" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)"/>
+                  <stop offset="100%" stop-color="var(--accent-2)"/>
+                </linearGradient>
+              </defs>
+              <rect x="8" y="16" width="344" height="196" rx="14" fill="url(#grad-code)" opacity="0.08" stroke="var(--border)"/>
+              <rect x="20" y="30" width="100" height="10" rx="4" fill="var(--accent)" opacity="0.6"/>
+              <rect x="20" y="54" width="320" height="4" rx="2" fill="var(--accent)" opacity="0.25"/>
+              <rect x="20" y="68" width="280" height="4" rx="2" fill="var(--accent-2)" opacity="0.25"/>
+              <rect x="20" y="82" width="240" height="4" rx="2" fill="var(--accent)" opacity="0.25"/>
+              <rect x="20" y="96" width="300" height="4" rx="2" fill="var(--accent-2)" opacity="0.25"/>
+              <g opacity="0.9">
+                <circle cx="280" cy="150" r="26" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M280 150 m-18 0 a18 18 0 1 1 36 0 a18 18 0 1 1 -36 0" fill="none" stroke="var(--accent-2)" stroke-width="2"/>
+                <path d="M280 150 L280 132" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+              </g>
+              <g>
+                <path d="M120 120 l-18 -14 l18 -14" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M160 92 l18 14 l-18 14" fill="none" stroke="var(--accent-2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="138" y="88" width="12" height="40" rx="3" fill="none" stroke="var(--accent)" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+        </div>
       </section>
 
-      <section class="info-grid">
-        <div class="info-card">
-          <h3 class="card-title">Live Preview</h3>
-          <p class="card-text">Changes are reflected automatically. No inline styles are used; all styles come from classes.</p>
+      <!-- Services -->
+      <section id="services" class="services-section container reveal" aria-labelledby="services-title">
+        <div class="section-head">
+          <h2 id="services-title" class="section-title">Our Services</h2>
+          <p class="section-desc">Focused, measurable impact — engineered for real results.</p>
         </div>
-        <div class="info-card">
-          <h3 class="card-title">Server</h3>
-          <p class="card-text">Static server listens on port 3000 to match the proxy target.</p>
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none"/><path d="M3 5h18v3H3zm0 11h18v3H3z" fill="currentColor" opacity=".6"/><rect x="6" y="10" width="12" height="4" rx="2" fill="currentColor"/></svg>
+            </div>
+            <h3 class="card-title">WordPress Development</h3>
+            <p class="card-text">Custom themes, blocks, and headless WP that scale with your business.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" fill="none"/><path d="M8 9h8M8 13h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 19l3-6 3 4 3-3 3 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card-title">PHP Development</h3>
+            <p class="card-text">Robust APIs and backend systems — secure, maintainable, and fast.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 18h16" stroke="currentColor" stroke-width="2"/><path d="M4 18c0-6 4-10 8-10s8 4 8 10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="18" r="2" fill="currentColor"/></svg>
+            </div>
+            <h3 class="card-title">SEO & Growth</h3>
+            <p class="card-text">Technical SEO, structured data, and content that drives qualified traffic.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12l6-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card-title">Speed Optimization</h3>
+            <p class="card-text">Core Web Vitals obsessed — we make pages blazing fast.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 6h10v12H5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 9h8" stroke="currentColor" stroke-width="2"/><path d="M9 13h6" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card-title">Content Writing</h3>
+            <p class="card-text">Clear, on-brand copy that converts and supports SEO goals.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="work" class="work-section container reveal" aria-labelledby="work-title">
+        <div class="section-head">
+          <h2 id="work-title" class="section-title">Featured Work</h2>
+          <p class="section-desc">A snapshot of outcomes we’ve delivered.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-media gradient-media gradient-blue"></div>
+            <div class="work-meta">
+              <h3 class="work-title">Headless WP + Next.js</h3>
+              <p class="work-text">90+ Lighthouse scores and 2x organic traffic.</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-media gradient-media gradient-purple"></div>
+            <div class="work-meta">
+              <h3 class="work-title">E‑commerce SEO</h3>
+              <p class="work-text">Schema, IA overhaul, +120% clicks YoY.</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-media gradient-media gradient-mixed"></div>
+            <div class="work-meta">
+              <h3 class="work-title">Performance Sprint</h3>
+              <p class="work-text">LCP < 2s, CLS < 0.05, FID < 100ms.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials-section container reveal" aria-labelledby="testimonials-title">
+        <div class="section-head">
+          <h2 id="testimonials-title" class="section-title">What clients say</h2>
+          <p class="section-desc">Real feedback from real partners.</p>
+        </div>
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <blockquote class="quote">“They ship fast and communicate clearly. Our site finally performs.”</blockquote>
+            <figcaption class="cite">— Priya S., Product Lead</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote class="quote">“SEO results exceeded expectations. Traffic growth was immediate.”</blockquote>
+            <figcaption class="cite">— Aaron T., Founder</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote class="quote">“Professional, modern, and future‑proof. Couldn’t ask for more.”</blockquote>
+            <figcaption class="cite">— Marta R., Marketing</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section id="contact" class="cta-section container reveal" aria-labelledby="cta-title">
+        <div class="cta-panel">
+          <h2 id="cta-title" class="cta-title">Ready to build what’s next?</h2>
+          <p class="cta-text">Tell us about your goals. We’ll propose a clear, actionable plan.</p>
+          <a class="button neon-cta" href="mailto:hello@novatech.studio">Start a project</a>
         </div>
       </section>
     </main>
 
-    <footer class="footer-bar" role="contentinfo">
-      <div class="footer-inner">
-        <span class="footer-note">Ready.</span>
-        <span class="clock" id="clock" aria-live="polite"></span>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-content">
+        <div class="footer-left">
+          <span class="brand-name">NovaTech Studio</span>
+          <span class="footer-dot" aria-hidden="true">•</span>
+          <span class="footer-note">Modern Web & SEO</span>
+        </div>
+        <div class="footer-right">
+          <span class="footer-clock" id="clock" aria-live="polite"></span>
+          <span class="footer-year" id="year"></span>
+        </div>
       </div>
     </footer>
 
