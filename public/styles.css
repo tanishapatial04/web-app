@@ -3,7 +3,7 @@
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
-body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6 "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif; }
 
 /* Subtle world background */
 .bg-surface { position: fixed; inset: 0; background: radial-gradient(1200px 600px at 80% -10%, rgba(59, 130, 246, 0.12), transparent 60%), radial-gradient(900px 600px at 0% 100%, rgba(167, 139, 250, 0.12), transparent 60%); pointer-events: none; }
@@ -32,6 +32,9 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 .input { width: 100%; padding: 12px 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--text); outline: none; transition: box-shadow .2s ease, border-color .2s ease; }
 .input:focus { border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); box-shadow: 0 0 0 6px var(--ring); }
 .textarea { resize: vertical; }
+
+/* Ensure form controls inherit global font */
+button, input, textarea, select { font-family: inherit; }
 
 /* Hero */
 .hero-section { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; padding: 48px 0 24px; }
