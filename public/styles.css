@@ -174,7 +174,7 @@ button, input, textarea, select { font-family: inherit; }
 .footer-note, .footer-list .footer-note { color: var(--muted); }
 .footer-list li { margin: 0; }
 .footer-list li .footer-note { margin-top: 2px; }
-.footer-contact a {color: #e0e0e1;}
+.footer-contact a, ul.contact-list a {color: #e0e0e1;}
 /* Bottom bar */
 .sub-footer { border-top: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); }
 .sub-footer-row { display: flex; justify-content: space-between; align-items: center; min-height: 48px; color: var(--muted); }
