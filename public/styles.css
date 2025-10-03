@@ -196,7 +196,6 @@ button, input, textarea, select { font-family: inherit; }
 @media (min-width: 768px) {
   .cta-container {flex-direction: row;align-items: center;gap: 3rem;}
   .cta-text {text-align: left;flex: 1;}
-  .cta-image {flex: 1;}
 }
 
 @media (max-width: 640px) {
