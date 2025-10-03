@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — NovaTech Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-surface grid-overlay"></div>
+    <div data-include="header"></div>
+
+    <main class="site-main" role="main">
+      <section class="container page-hero reveal">
+        <h1 class="page-title">Contact</h1>
+        <p class="page-subtitle">We’d love to hear from you.</p>
+      </section>
+
+      <section class="container contact-section reveal">
+        <div class="contact-grid">
+          <form class="contact-form gradient-border" action="#" method="post" onsubmit="return false;">
+            <div class="form-row">
+              <label class="label" for="name">Name</label>
+              <input class="input" id="name" name="name" type="text" required />
+            </div>
+            <div class="form-row">
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label class="label" for="message">Message</label>
+              <textarea class="input textarea" id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button class="button neon-cta" type="submit">Send Message</button>
+          </form>
+          <aside class="contact-info">
+            <div class="info-card">
+              <h2 class="tile-title">Reach us</h2>
+              <p class="tile-text">hello@novatech.studio<br/>+1 (555) 123‑4567<br/>123 Market St, SF</p>
+            </div>
+            <div class="info-icons">
+              <span class="icon-circle" aria-label="Email"></span>
+              <span class="icon-circle" aria-label="Chat"></span>
+              <span class="icon-circle" aria-label="Phone"></span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="cta-section container reveal">
+        <div class="cta-panel">
+          <h2 class="cta-title">Let’s work together</h2>
+          <p class="cta-text">Share a few details and we’ll respond quickly.</p>
+          <a class="button neon-cta" href="mailto:hello@novatech.studio">Email us</a>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="footer"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

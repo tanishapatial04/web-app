@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio ��� NovaTech Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-surface grid-overlay"></div>
+    <div data-include="header"></div>
+
+    <main class="site-main" role="main">
+      <section class="container page-hero reveal">
+        <h1 class="page-title">Portfolio</h1>
+        <p class="page-subtitle">Selected projects and case studies.</p>
+      </section>
+
+      <section class="container reveal">
+        <div class="filter-bar">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress</button>
+          <button class="filter-btn" data-filter="php">PHP</button>
+          <button class="filter-btn" data-filter="seo">SEO</button>
+          <button class="filter-btn" data-filter="content">Content</button>
+        </div>
+        <div class="work-grid portfolio-grid" id="portfolioGrid">
+          <article class="work-card" data-cat="wordpress">
+            <div class="work-media gradient-media gradient-blue"></div>
+            <div class="work-meta"><h3 class="work-title">Headless WP</h3><p class="work-text">Next.js + WPGraphQL</p></div>
+          </article>
+          <article class="work-card" data-cat="php">
+            <div class="work-media gradient-media gradient-purple"></div>
+            <div class="work-meta"><h3 class="work-title">API Platform</h3><p class="work-text">Secure PHP microservices</p></div>
+          </article>
+          <article class="work-card" data-cat="seo">
+            <div class="work-media gradient-media gradient-mixed"></div>
+            <div class="work-meta"><h3 class="work-title">SEO Revamp</h3><p class="work-text">+120% organic</p></div>
+          </article>
+          <article class="work-card" data-cat="content">
+            <div class="work-media gradient-media gradient-blue"></div>
+            <div class="work-meta"><h3 class="work-title">Content Engine</h3><p class="work-text">Editorial playbooks</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section container reveal">
+        <div class="cta-panel">
+          <h2 class="cta-title">Want results like these?</h2>
+          <p class="cta-text">Let’s align on goals and outcomes.</p>
+          <a class="button neon-cta" href="contact.html">Start a project</a>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="footer"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

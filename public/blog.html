@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — NovaTech Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-surface grid-overlay"></div>
+    <div data-include="header"></div>
+
+    <main class="site-main" role="main">
+      <section class="container page-hero reveal">
+        <h1 class="page-title">Insights</h1>
+        <p class="page-subtitle">Thoughts on engineering, SEO, and growth.</p>
+      </section>
+
+      <section class="container reveal">
+        <div class="filter-bar">
+          <button class="tag-btn is-active" data-tag="all">All</button>
+          <button class="tag-btn" data-tag="wordpress">WordPress</button>
+          <button class="tag-btn" data-tag="php">PHP</button>
+          <button class="tag-btn" data-tag="seo">SEO</button>
+          <button class="tag-btn" data-tag="content">Content</button>
+        </div>
+        <div class="blog-grid" id="blogGrid">
+          <article class="post-card gradient-border" data-tag="wordpress">
+            <div class="post-thumb gradient-media gradient-blue"></div>
+            <div class="post-body"><h3 class="post-title">Modern WordPress Blocks</h3><p class="post-excerpt">A look at composable UI with Gutenberg and performance best practices.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+          <article class="post-card gradient-border" data-tag="php">
+            <div class="post-thumb gradient-media gradient-purple"></div>
+            <div class="post-body"><h3 class="post-title">Secure PHP APIs</h3><p class="post-excerpt">Authentication, rate limits, and monitoring built‑in from day one.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+          <article class="post-card gradient-border" data-tag="seo">
+            <div class="post-thumb gradient-media gradient-mixed"></div>
+            <div class="post-body"><h3 class="post-title">Structured Data for SEO</h3><p class="post-excerpt">Using schema to improve visibility and CTR.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+          <article class="post-card gradient-border" data-tag="content">
+            <div class="post-thumb gradient-media gradient-blue"></div>
+            <div class="post-body"><h3 class="post-title">Content That Converts</h3><p class="post-excerpt">Editorial frameworks and systems that scale.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="footer"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
