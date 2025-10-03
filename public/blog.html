@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — NovaTech Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-surface grid-overlay"></div>
+    <header class="site-header" role="banner">
+      <div class="container header-content">
+        <a href="index.html" class="brand"><span class="brand-mark"></span><span class="brand-name">NovaTech Studio</span></a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+          <a class="nav-link" href="blog.html" aria-current="page">Blog</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="button neon-cta" href="contact.html">Let’s talk</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" role="main">
+      <section class="container page-hero reveal">
+        <h1 class="page-title">Insights</h1>
+        <p class="page-subtitle">Thoughts on engineering, SEO, and growth.</p>
+      </section>
+
+      <section class="container reveal">
+        <div class="filter-bar">
+          <button class="tag-btn is-active" data-tag="all">All</button>
+          <button class="tag-btn" data-tag="wordpress">WordPress</button>
+          <button class="tag-btn" data-tag="php">PHP</button>
+          <button class="tag-btn" data-tag="seo">SEO</button>
+          <button class="tag-btn" data-tag="content">Content</button>
+        </div>
+        <div class="blog-grid" id="blogGrid">
+          <article class="post-card gradient-border" data-tag="wordpress">
+            <div class="post-thumb gradient-media gradient-blue"></div>
+            <div class="post-body"><h3 class="post-title">Modern WordPress Blocks</h3><p class="post-excerpt">A look at composable UI with Gutenberg and performance best practices.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+          <article class="post-card gradient-border" data-tag="php">
+            <div class="post-thumb gradient-media gradient-purple"></div>
+            <div class="post-body"><h3 class="post-title">Secure PHP APIs</h3><p class="post-excerpt">Authentication, rate limits, and monitoring built‑in from day one.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+          <article class="post-card gradient-border" data-tag="seo">
+            <div class="post-thumb gradient-media gradient-mixed"></div>
+            <div class="post-body"><h3 class="post-title">Structured Data for SEO</h3><p class="post-excerpt">Using schema to improve visibility and CTR.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+          <article class="post-card gradient-border" data-tag="content">
+            <div class="post-thumb gradient-media gradient-blue"></div>
+            <div class="post-body"><h3 class="post-title">Content That Converts</h3><p class="post-excerpt">Editorial frameworks and systems that scale.</p><a class="button ghost-btn" href="#">Read More</a></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-content">
+        <div class="footer-left"><span class="brand-name">NovaTech Studio</span><span class="footer-dot">•</span><span class="footer-note">Modern Web & SEO</span></div>
+        <div class="footer-right"><span class="footer-clock" id="clock"></span><span class="footer-year" id="year"></span></div>
+      </div>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
