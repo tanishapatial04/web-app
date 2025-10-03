@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaTech Studio — Modern Web & SEO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-surface grid-overlay"></div>
+
+    <div data-include="header"></div>
+
+    <main class="site-main" role="main">
+      <!-- Hero -->
+      <section class="hero-section container reveal" aria-labelledby="hero-title">
+        <div class="hero-body">
+          <h1 id="hero-title" class="hero-title">
+            Empowering Businesses with WordPress, PHP & Digital Growth
+          </h1>
+          <p class="hero-subtitle">
+            We craft WordPress and PHP solutions, boost SEO, optimize performance, and create content that ranks.
+          </p>
+          <div class="hero-actions">
+            <a class="button neon-cta" href="services.html">Explore services</a>
+            <a class="button ghost-btn" href="portfolio.html">See our work</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="glow-orb orb-blue" aria-hidden="true"></div>
+          <div class="glow-orb orb-purple" aria-hidden="true"></div>
+          <div class="hero-illustration" aria-hidden="true">
+            <svg class="ill-dev" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-code" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)"/>
+                  <stop offset="100%" stop-color="var(--accent-2)"/>
+                </linearGradient>
+              </defs>
+              <rect x="8" y="16" width="344" height="196" rx="14" fill="url(#grad-code)" opacity="0.08" stroke="var(--border)"/>
+              <rect x="20" y="30" width="100" height="10" rx="4" fill="var(--accent)" opacity="0.6"/>
+              <rect x="20" y="54" width="320" height="4" rx="2" fill="var(--accent)" opacity="0.25"/>
+              <rect x="20" y="68" width="280" height="4" rx="2" fill="var(--accent-2)" opacity="0.25"/>
+              <rect x="20" y="82" width="240" height="4" rx="2" fill="var(--accent)" opacity="0.25"/>
+              <rect x="20" y="96" width="300" height="4" rx="2" fill="var(--accent-2)" opacity="0.25"/>
+              <g opacity="0.9">
+                <circle cx="280" cy="150" r="26" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                <path d="M280 150 m-18 0 a18 18 0 1 1 36 0 a18 18 0 1 1 -36 0" fill="none" stroke="var(--accent-2)" stroke-width="2"/>
+                <path d="M280 150 L280 132" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+              </g>
+              <g>
+                <path d="M120 120 l-18 -14 l18 -14" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M160 92 l18 14 l-18 14" fill="none" stroke="var(--accent-2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="138" y="88" width="12" height="40" rx="3" fill="none" stroke="var(--accent)" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services grid -->
+      <section class="services-section container reveal" aria-labelledby="services-title">
+        <div class="section-head">
+          <h2 id="services-title" class="section-title">Our Services</h2>
+          <p class="section-desc">Focused, measurable impact — engineered for real results.</p>
+        </div>
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none"/><path d="M3 5h18v3H3zm0 11h18v3H3z" fill="currentColor" opacity=".6"/><rect x="6" y="10" width="12" height="4" rx="2" fill="currentColor"/></svg>
+            </div>
+            <h3 class="card-title">WordPress Development</h3>
+            <p class="card-text">Unlock the full potential of your website with custom WordPress development tailored to your business needs. From
+            responsive designs to seamless plugin integration, we create sites that are fast, secure, and easy to manage. Let us
+            build a platform that grows with you and makes a lasting impression online.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z" fill="none"/><path d="M8 9h8M8 13h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 19l3-6 3 4 3-3 3 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card-title">PHP Development</h3>
+            <p class="card-text">Unlock robust and scalable web solutions with custom PHP development tailored to your unique business needs. From
+            dynamic websites to complex applications, we ensure clean code, seamless functionality, and reliable performance that
+            grows with your business.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 18h16" stroke="currentColor" stroke-width="2"/><path d="M4 18c0-6 4-10 8-10s8 4 8 10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="18" r="2" fill="currentColor"/></svg>
+            </div>
+            <h3 class="card-title">SEO & Growth</h3>
+            <p class="card-text">Boost your online presence and drive measurable results with expert SEO strategies. We focus on organic growth, higher
+            search rankings, and converting traffic into loyal customers, helping your brand stand out in a competitive digital
+            landscape.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12l6-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card-title">Speed Optimization</h3>
+            <p class="card-text">Enhance your website’s performance with advanced speed optimization techniques. From faster load times to smooth user
+            experiences, we ensure your site runs efficiently, retains visitors, and maximizes conversions across all devices.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 6h10v12H5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 9h8" stroke="currentColor" stroke-width="2"/><path d="M9 13h6" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card-title">Content Writing</h3>
+            <p class="card-text">Engage, inform, and convert your audience with high-quality content crafted to resonate. From blogs and articles to
+            website copy, our content strategy ensures clarity, creativity, and SEO-friendly storytelling that strengthens your
+            brand voice.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider reveal" aria-hidden="true"></div>
+
+      <!-- Testimonial slider -->
+      <section class="testimonials-section container reveal" aria-labelledby="testimonials-title">
+        <div class="section-head">
+          <h2 id="testimonials-title" class="section-title">What clients say</h2>
+          <p class="section-desc">Real feedback from real partners.</p>
+        </div>
+        <div class="testimonial-slider" data-autoplay="true">
+          <button class="slider-btn prev" aria-label="Previous testimonial">‹</button>
+          <div class="slides">
+            <figure class="testimonial-card gradient-border">
+              <div class="testimonial-top">
+                <span class="avatar" data-initials="PS" aria-hidden="true"></span>
+                <div class="rating" aria-label="5 star rating">
+                  <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                </div>
+              </div>
+              <blockquote class="quote">“They ship fast and communicate clearly. Our site finally performs.”</blockquote>
+              <figcaption class="cite">— Priya S., Product Lead</figcaption>
+            </figure>
+            <figure class="testimonial-card gradient-border">
+              <div class="testimonial-top">
+                <span class="avatar" data-initials="AT" aria-hidden="true"></span>
+                <div class="rating" aria-label="5 star rating">
+                  <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                </div>
+              </div>
+              <blockquote class="quote">“SEO results exceeded expectations. Traffic growth was immediate.”</blockquote>
+              <figcaption class="cite">— Aaron T., Founder</figcaption>
+            </figure>
+            <figure class="testimonial-card gradient-border">
+              <div class="testimonial-top">
+                <span class="avatar" data-initials="MR" aria-hidden="true"></span>
+                <div class="rating" aria-label="5 star rating">
+                  <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                </div>
+              </div>
+              <blockquote class="quote">“Professional, modern, and future‑proof. Couldn’t ask for more.”</blockquote>
+              <figcaption class="cite">— Marta R., Marketing</figcaption>
+            </figure>
+          </div>
+          <button class="slider-btn next" aria-label="Next testimonial">›</button>
+        </div>
+      </section>
+
+      <section class="cta-section" style="padding: 4rem 1rem;">
+        <div class="cta-container">
+          <!-- Left Column: Text -->
+          <div class="cta-text">
+            <h2>Ready to Build What’s Next?</h2>
+            <p>
+              We’re here to transform your ideas into reality with a clear, actionable plan that fits your goals perfectly.
+              From sleek websites to engaging apps and innovative digital experiences, our team will guide every step to make
+              sure your project stands out and delivers results that truly matter in today’s fast-paced world.
+            </p>
+            <a href="contact.html" class="cta-button">Start a Project</a>
+          </div>
+
+          <!-- Right Column: Illustration -->
+          <div class="cta-image">
+            <img src="https://1963a5c6-3d0c-44f1-987d-e9efd9ff475b-00-36y6yfi0perum.janeway.replit.dev/@fs/home/runner/workspace/attached_assets/generated_images/SEO_analytics_dashboard_illustration_8288e6dd.png" alt="Illustration of project development">
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <div data-include="footer"></div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
