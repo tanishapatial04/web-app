@@ -98,7 +98,7 @@ p.cta-text.text-left{text-align: left;}
 .contact-section {padding: 6rem 0;}
 .contact-container {display: flex;flex-wrap: wrap;gap: 2rem;}
 .contact-info,.contact-form {flex: 1 1 300px;}
-.contact-info p,.contact-info ul {margin-bottom: 1.5rem;}
+.contact-info p,.contact-info ul {margin-bottom: 1.5rem; padding-left: 0px;}
 .contact-list li {margin-bottom: 0.75rem;display: flex;align-items: center;gap: 10px;}
 
 .contact-list .icon-badge {margin-bottom: 0;}
