@@ -97,7 +97,7 @@ button, input, textarea, select { font-family: inherit; }
 .slider-btn { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; }
 .slides { overflow: hidden; position: relative; }
 .slides-track { display: flex; transition: transform .5s ease; gap: 16px; }
-.testimonial-card { flex: 0 0 calc(44% - 10px); background: var(--card); border: 1px solid transparent; border-radius: 16px; padding: 16px; }
+.testimonial-card { flex: 0 0 50%; background: var(--card); border: 1px solid transparent; border-radius: 16px; padding: 16px; }
 .gradient-border { background: linear-gradient(var(--card), var(--card)) padding-box, linear-gradient(135deg, rgba(59,130,246,.6), rgba(167,139,250,.6)) border-box; border: 1px solid transparent; }
 .testimonial-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
 .avatar { width: 40px; height: 40px; border-radius: 999px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 60%), linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset; display: grid; place-items: center; font-weight: 800; }
