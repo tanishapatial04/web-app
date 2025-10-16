@@ -14,11 +14,37 @@
 
   function setActiveNav() {
     const path = location.pathname.split('/').pop() || 'index.html';
-    const links = document.querySelectorAll('.primary-nav .nav-link');
+    const links = document.querySelectorAll('.primary-nav .nav-link, .mobile-nav-link');
     links.forEach((a) => {
       const href = a.getAttribute('href');
       a.removeAttribute('aria-current');
       if (href === path) a.setAttribute('aria-current', 'page');
+    });
+  }
+
+  function initMobileMenu() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (!toggle || !mobileNav) return;
+
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isOpen);
+      mobileNav.classList.toggle('is-open');
+    });
+
+    mobileNav.querySelectorAll('.mobile-nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('is-open');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.site-header')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('is-open');
+      }
     });
   }
 
@@ -128,5 +154,6 @@
     initSlider();
     initPortfolioFilters();
     initBlogFilters();
+    initMobileMenu();
   });
 })();
