@@ -30,8 +30,8 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 .menu-icon::after { content: ''; position: absolute; bottom: 0; width: 100%; }
 .menu-icon { width: 100%; }
 .mobile-menu-toggle[aria-expanded="true"] .menu-icon { background: transparent; }
-.mobile-menu-toggle[aria-expanded="true"] .menu-icon::before { transform: rotate(45deg); top: 7px; color: white;}
-.mobile-menu-toggle[aria-expanded="true"] .menu-icon::after { transform: rotate(-45deg); bottom: 7px; color: white; }
+.mobile-menu-toggle[aria-expanded="true"] .menu-icon::before { transform: rotate(45deg); top: 1px; color: white;}
+.mobile-menu-toggle[aria-expanded="true"] .menu-icon::after { transform: rotate(-45deg); bottom: 0px; color: white; }
 
 .mobile-nav { display: none; position: absolute; top: 64px; right: 0; left: 0; background: color-mix(in srgb, var(--card) 98%, transparent); backdrop-filter: saturate(1.2) blur(10px); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 20px; gap: 8px; max-height: calc(100vh - 64px); overflow-y: auto; }
 .mobile-nav.is-open { display: flex; }
