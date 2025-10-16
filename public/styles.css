@@ -278,9 +278,10 @@ p.cta-text.text-left{text-align: left;}
 
 /* Responsive (preserve original breakpoint) */
 @media (max-width: 640px) {
+  .primary-nav { display: none; }
+  .mobile-menu-toggle { display: flex; }
   .hero-section { grid-template-columns: 1fr; }
   .card-grid, .work-grid, .testimonial-grid, .blog-grid, .service-row, .contact-grid { grid-template-columns: 1fr; }
-  .primary-nav { gap: 10px; }
   .newsletter { width: 100%; }
   .newsletter .input { width: 100%; }
   .footer-columns { grid-template-columns: 1fr; }
