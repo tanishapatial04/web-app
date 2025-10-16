@@ -109,7 +109,6 @@ button, input, textarea, select { font-family: inherit; }
 /* CTA Container */
 .cta-container {display: flex;flex-direction: column;align-items: center;max-width: 1200px;
   margin: 0 auto;gap: 2rem;}
-.cta-text {text-align: center;}
 p.cta-text.text-left{text-align: left;}
 
 /* Forms and newsletter */
