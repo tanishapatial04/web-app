@@ -9,7 +9,7 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 .bg-surface { position: fixed; inset: 0; background: radial-gradient(1200px 600px at 80% -10%, rgba(59, 130, 246, 0.12), transparent 60%), radial-gradient(900px 600px at 0% 100%, rgba(167, 139, 250, 0.12), transparent 60%); pointer-events: none; }
 .grid-overlay { position: fixed; inset: 0; background-image: linear-gradient(to bottom, rgba(255,255,255,.03), rgba(255,255,255,0)), repeating-linear-gradient(to right, rgba(255,255,255,.04) 0 1px, transparent 1px 80px), repeating-linear-gradient(to bottom, rgba(255,255,255,.04) 0 1px, transparent 1px 80px); opacity: .35; mix-blend-mode: screen; pointer-events: none; }
 
-.container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1440px; margin: 0 auto; padding: 0 20px; }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--card) 94%, transparent); backdrop-filter: saturate(1.2) blur(10px); border-bottom: 1px solid var(--border); }
