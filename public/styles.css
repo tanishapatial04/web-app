@@ -19,7 +19,7 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 .brand-mark svg { width: 100%; height: 100%; }
 .brand-name { font-weight: 700; letter-spacing: .2px; }
 .primary-nav { display: flex; align-items: center; gap: 14px; }
-.nav-link { text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 8px; }
+.nav-link { text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 8px; color: #fff;}
 .nav-link[aria-current="page"], .nav-link:hover { color: var(--text); background: rgba(255,255,255,.04); }
 
 /* Mobile Menu */
