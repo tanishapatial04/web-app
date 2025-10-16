@@ -154,5 +154,6 @@
     initSlider();
     initPortfolioFilters();
     initBlogFilters();
+    initMobileMenu();
   });
 })();
