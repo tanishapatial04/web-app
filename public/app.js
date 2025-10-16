@@ -98,7 +98,7 @@
     slidesWrap.appendChild(track);
 
     let index = 0;
-    function sync() { track.style.transform = `translateX(${-index * 100}%)`; }
+    function sync() { track.style.transform = `translateX(${-index * 50}%)`; }
     function next() { index = (index + 1) % items.length; sync(); }
     function prev() { index = (index - 1 + items.length) % items.length; sync(); }
 
