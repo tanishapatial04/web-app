@@ -302,7 +302,7 @@ p.cta-text.text-left{text-align: left;}
 }
 
 @media only screen and (max-width: 1024px) {
-  .testimonial-card {flex: 0 0 40%;}
+  .testimonial-card {flex: 0 0 50%;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -324,6 +324,12 @@ p.cta-text.text-left{text-align: left;}
   p.section-desc {text-align: right;}
   blockquote.quote, figcaption.cite {font-size: 12px;margin: 0 auto;}
   span.avatar {width: 30px;height: 30px;}
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {flex: 0 0 100%;}
+  .slider-btn {width: 32px;height: 32px;}
+  .slides-track {gap: 12px;}
 }
 
 @media (max-width: 549px) {

@@ -111,11 +111,12 @@
     if (!slider) return;
 
     const slidesWrap = slider.querySelector(".slides");
-    const items = Array.from(slider.querySelectorAll(".testimonial-card"));
+    const items = Array.from(slidesWrap.querySelectorAll(".testimonial-card"));
+
     const track = document.createElement("div");
     track.className = "slides-track";
     items.forEach((n) => track.appendChild(n));
-    slidesWrap.innerHTML = ""; // clear existing
+    slidesWrap.innerHTML = "";
     slidesWrap.appendChild(track);
 
     let index = 0;
@@ -128,17 +129,16 @@
     function updateLayout() {
       visibleSlides = getVisibleSlides();
       const slideWidth = 100 / visibleSlides;
-
-      track.style.width = `${(items.length * slideWidth)}%`;
       items.forEach((item) => {
         item.style.flex = `0 0 ${slideWidth}%`;
       });
-
       sync();
     }
 
     function sync() {
       const slideWidth = 100 / visibleSlides;
+      const totalSlides = items.length;
+      if (index >= totalSlides) index = 0;
       track.style.transform = `translateX(${-index * slideWidth}%)`;
     }
 
@@ -152,18 +152,16 @@
       sync();
     }
 
-    const nextBtn = slider.querySelector(".next");
-    const prevBtn = slider.querySelector(".prev");
-    if (nextBtn) nextBtn.addEventListener("click", next);
-    if (prevBtn) prevBtn.addEventListener("click", prev);
+    slider.querySelector(".next")?.addEventListener("click", next);
+    slider.querySelector(".prev")?.addEventListener("click", prev);
 
     let autoplay;
-    const shouldAuto = slider.getAttribute("data-autoplay") === "true";
+    const shouldAuto = slider.dataset.autoplay === "true";
     function start() {
       if (shouldAuto) autoplay = setInterval(next, 4500);
     }
     function stop() {
-      if (autoplay) clearInterval(autoplay);
+      clearInterval(autoplay);
     }
 
     slider.addEventListener("mouseenter", stop);
@@ -173,7 +171,6 @@
     updateLayout();
     start();
   }
-
 
   function initPortfolioFilters() {
     const grid = document.getElementById("portfolioGrid");
