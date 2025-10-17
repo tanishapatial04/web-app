@@ -329,9 +329,10 @@ p.cta-text.text-left{text-align: left;}
 @media (max-width: 768px) {
   .testimonial-card {flex: 0 0 100%;}
   .slider-btn {width: 32px;height: 32px;}
-  .slides-track {gap: 12px;}
+  .slides-track {gap: 5px;}
 }
 
-@media (max-width: 549px) {
+@media (max-width: 667px) {
+  .slides-track {gap: 0px;}
   .footer-columns { grid-template-columns: 1fr; }
 }
