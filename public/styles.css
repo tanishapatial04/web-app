@@ -250,8 +250,9 @@ p.cta-text.text-left{text-align: left;}
 .divider.reveal.is-visible { animation: divider-glow .8s cubic-bezier(0.23, 1, 0.320, 1) forwards; }
 @keyframes divider-glow { from { opacity: 0; } to { opacity: 1; box-shadow: 0 0 16px rgba(59,130,246,.15); } }
 .filter-bar { display: flex; gap: 10px; margin-bottom: 12px; }
-.filter-btn, .tag-btn { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-weight: 700; cursor: pointer; }
-.filter-btn.is-active, .tag-btn.is-active { color: var(--text); background: rgba(255,255,255,.04); }
+.filter-btn, .tag-btn { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-weight: 700; cursor: pointer;color: white;
+font-weight: 400; }
+.filter-btn.is-active, .tag-btn.is-active { color: #ffffff; background: rgba(255,255,255,.04); font-weight: 600;}
 .is-hidden { display: none !important; }
 
 /* About page */
