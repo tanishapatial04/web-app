@@ -303,7 +303,13 @@ p.cta-text.text-left{text-align: left;}
   .testimonial-card {flex: 0 0 40%;}
 }
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 1024px) {
+  .testimonial-card {flex: 0 0 47%;}
+}
+
+
+
+@media (max-width: 769px) {
   .primary-nav { display: none; }
   .mobile-menu-toggle { display: flex; }
   .hero-section { grid-template-columns: 1fr; }
