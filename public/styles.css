@@ -176,16 +176,15 @@ p.cta-text.text-left{text-align: left;}
 .footer-columns { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 24px; padding: 28px 20px; }
 .footer-about .footer-desc { margin: 8px 0 10px; }
 .footer-socials { display: flex; gap: 10px; }
+.footer-socials a svg, .footer-socials a svg path{fill: #fff }
 .footer-title { margin: 0 0 10px; font-weight: 800; font-size: 16px; }
 .footer-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .footer-list.compact { gap: 6px; }
 .footer-list a { color: var(--text); text-decoration: none; }
 .footer-list a:hover { color: var(--accent); }
-.footer-note { }
 .footer-contact { display: grid; gap: 8px; font-style: normal; }
 .contact-row { display: grid; gap: 8px; }
 .ci { filter: saturate(0.8); }
-.footer-note, .footer-desc, .footer-list .footer-note, .footer-note p, .footer-note small, .footer-note span, .footer-note a { }
 .footer-note, .footer-desc, .footer-note small, .footer-note p { line-height: 1.5; }
 .footer-note strong { color: var(--text); }
 .footer-list .footer-note, .footer-note { font-size: 12px; }
@@ -193,7 +192,6 @@ p.cta-text.text-left{text-align: left;}
 .footer-note, .footer-note a { text-decoration: none; }
 .footer-note a:hover { text-decoration: underline; }
 .footer-note, .footer-list .footer-note { display: block; }
-.footer-note, .footer-list .footer-note { }
 .footer-list li { margin: 0; }
 .footer-list li .footer-note { margin-top: 2px; }
 .footer-contact a, ul.contact-list a {color: #e0e0e1;}
