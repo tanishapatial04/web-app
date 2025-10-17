@@ -334,6 +334,7 @@ font-weight: 400; }
 }
 
 @media (max-width: 667px) {
+  .service-row {grid-template-columns: 1fr !important;}
   .slides-track {gap: 0px;}
   .testimonial-card{margin-right:0px;margin-left:0px;}
   .footer-columns { grid-template-columns: 1fr; }
