@@ -117,10 +117,24 @@
     slidesWrap.appendChild(track);
 
     let index = 0;
-    const visibleSlides = 2; // 👈 how many visible at once
+    let visibleSlides = window.innerWidth < 768 ? 1 : 2; // 👈 responsive
 
     function sync() {
-      track.style.transform = `translateX(${-index * (100 / visibleSlides)}%)`;
+      const slideWidth = 100 / visibleSlides;
+      track.style.transform = `translateX(${-index * slideWidth}%)`;
+      track.style.width = `${(items.length * 100) / visibleSlides}%`;
+      items.forEach((item) => {
+        item.style.flex = `0 0 ${slideWidth}%`;
+      });
+    }
+
+    function updateVisibleSlides() {
+      const newVisible = window.innerWidth < 768 ? 1 : 2;
+      if (newVisible !== visibleSlides) {
+        visibleSlides = newVisible;
+        index = 0; // reset position on layout change
+        sync();
+      }
     }
 
     function next() {
@@ -148,6 +162,10 @@
     }
     slider.addEventListener("mouseenter", stop);
     slider.addEventListener("mouseleave", start);
+
+    window.addEventListener("resize", updateVisibleSlides);
+
+    sync();
     start();
   }
 
