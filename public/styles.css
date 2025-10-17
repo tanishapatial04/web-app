@@ -320,6 +320,8 @@ p.cta-text.text-left{text-align: left;}
   .sub-footer-row { gap: 6px; padding: 10px 20px; }
   .contact-info, .contact-form {flex: 1 1 100%;}
   p.section-desc {text-align: right;}
+  blockquote.quote, figcaption.cite {font-size: 12px;margin: 0 auto;}
+  span.avatar {width: 30px;height: 30px;}
 }
 
 @media (max-width: 549px) {
