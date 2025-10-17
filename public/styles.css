@@ -320,4 +320,5 @@ p.cta-text.text-left{text-align: left;}
   .newsletter .input { width: 100%; }
   .footer-columns { grid-template-columns: 1fr; }
   .sub-footer-row { flex-direction: column; gap: 6px; padding: 10px 0; }
+  .contact-info, .contact-form {flex: 1 1 100%;}
 }
