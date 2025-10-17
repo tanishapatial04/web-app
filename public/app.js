@@ -117,7 +117,7 @@
     slidesWrap.appendChild(track);
 
     let index = 0;
-    const visibleSlides = 1; // 👈 how many visible at once
+    const visibleSlides = 2; // 👈 how many visible at once
 
     function sync() {
       track.style.transform = `translateX(${-index * (100 / visibleSlides)}%)`;
