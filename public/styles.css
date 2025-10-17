@@ -160,7 +160,7 @@ p.cta-text.text-left{text-align: left;}
 /* Blog cards */
 .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .post-card { background: var(--card); border-radius: 16px; border: 1px solid transparent; overflow: hidden; transition: all .3s cubic-bezier(0.23, 1, 0.320, 1); }
-.post-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 30%, rgba(255,255,255,.05)), 0 12px 32px rgba(59,130,246,.15); border-color: color-mix(in srgb, var(--accent) 40%, rgba(255,255,255,.05)); }
+.post-card:hover { transform: translateY(-6px) scale(1.02); border-color: color-mix(in srgb, var(--accent) 40%, rgba(255,255,255,.05)); }
 .post-thumb { height: 140px; }
 .post-body { padding: 14px; display: grid; gap: 8px; }
 .post-title { margin: 0; font-weight: 700; }
