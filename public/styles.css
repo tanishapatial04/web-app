@@ -104,7 +104,9 @@ button, input, textarea, select { font-family: inherit; }
 .avatar::after { content: attr(data-initials); color: #0b0f1a; }
 .rating { display: inline-flex; gap: 4px; color: var(--accent); }
 .star::before { content: "★"; }
-
+.testimonial-slider .slides {overflow: hidden;position: relative;}
+.slides-track {display: flex;transition: transform 0.6s ease;will-change: transform;}
+.testimonial-card {  flex: 0 0 50%; /* JS will override to 100% on mobile */box-sizing: border-box;}
 
 /* CTA Container */
 .cta-container {display: flex;flex-direction: column;align-items: center;max-width: 1200px;

@@ -109,32 +109,37 @@
   function initSlider() {
     const slider = document.querySelector(".testimonial-slider");
     if (!slider) return;
+
     const slidesWrap = slider.querySelector(".slides");
     const items = Array.from(slider.querySelectorAll(".testimonial-card"));
     const track = document.createElement("div");
     track.className = "slides-track";
     items.forEach((n) => track.appendChild(n));
+    slidesWrap.innerHTML = ""; // clear existing
     slidesWrap.appendChild(track);
 
     let index = 0;
-    let visibleSlides = window.innerWidth < 768 ? 1 : 2; // 👈 responsive
+    let visibleSlides = getVisibleSlides();
+
+    function getVisibleSlides() {
+      return window.innerWidth < 768 ? 1 : 2;
+    }
+
+    function updateLayout() {
+      visibleSlides = getVisibleSlides();
+      const slideWidth = 100 / visibleSlides;
+
+      track.style.width = `${(items.length * slideWidth)}%`;
+      items.forEach((item) => {
+        item.style.flex = `0 0 ${slideWidth}%`;
+      });
+
+      sync();
+    }
 
     function sync() {
       const slideWidth = 100 / visibleSlides;
       track.style.transform = `translateX(${-index * slideWidth}%)`;
-      track.style.width = `${(items.length * 100) / visibleSlides}%`;
-      items.forEach((item) => {
-        item.style.flex = `0 0 ${slideWidth}%`;
-      });
-    }
-
-    function updateVisibleSlides() {
-      const newVisible = window.innerWidth < 768 ? 1 : 2;
-      if (newVisible !== visibleSlides) {
-        visibleSlides = newVisible;
-        index = 0; // reset position on layout change
-        sync();
-      }
     }
 
     function next() {
@@ -149,8 +154,8 @@
 
     const nextBtn = slider.querySelector(".next");
     const prevBtn = slider.querySelector(".prev");
-    nextBtn && nextBtn.addEventListener("click", next);
-    prevBtn && prevBtn.addEventListener("click", prev);
+    if (nextBtn) nextBtn.addEventListener("click", next);
+    if (prevBtn) prevBtn.addEventListener("click", prev);
 
     let autoplay;
     const shouldAuto = slider.getAttribute("data-autoplay") === "true";
@@ -160,14 +165,15 @@
     function stop() {
       if (autoplay) clearInterval(autoplay);
     }
+
     slider.addEventListener("mouseenter", stop);
     slider.addEventListener("mouseleave", start);
+    window.addEventListener("resize", updateLayout);
 
-    window.addEventListener("resize", updateVisibleSlides);
-
-    sync();
+    updateLayout();
     start();
   }
+
 
   function initPortfolioFilters() {
     const grid = document.getElementById("portfolioGrid");
