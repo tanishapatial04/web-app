@@ -293,6 +293,8 @@ p.cta-text.text-left{text-align: left;}
   .mobile-menu-toggle { display: flex; }
   .hero-section { grid-template-columns: 1fr; }
   .card-grid, .work-grid, .testimonial-grid, .blog-grid, .service-row, .contact-grid { grid-template-columns: 1fr; }
+  .cta-two-col { grid-template-columns: 1fr; gap: 24px; }
+  .cta-graphics { min-height: 280px; }
   .newsletter { width: 100%; }
   .newsletter .input { width: 100%; }
   .footer-columns { grid-template-columns: 1fr; }
