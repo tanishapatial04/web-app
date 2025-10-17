@@ -27,7 +27,7 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 
 .mobile-nav { display: none; position: absolute; top: 64px; right: 0; left: 0; background: color-mix(in srgb, var(--card) 98%, transparent); backdrop-filter: saturate(1.2) blur(10px); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 20px; gap: 8px; max-height: calc(100vh - 64px); overflow-y: auto; }
 .mobile-nav.is-open { display: flex; }
-.mobile-nav-link { text-decoration: none; font-weight: 600; padding: 12px 12px; border-radius: 8px; transition: all 0.2s ease; }
+.mobile-nav-link { text-decoration: none; font-weight: 600; padding: 12px 12px; border-radius: 8px; transition: all 0.2s ease; color: #fff;}
 .mobile-nav-link:hover { color: var(--text); background: rgba(255,255,255,.04); }
 .mobile-nav-link[aria-current="page"] { color: var(--text); background: rgba(255,255,255,.04); }
 .mobile-nav-cta { width: 100%; }
