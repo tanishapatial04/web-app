@@ -318,7 +318,8 @@ p.cta-text.text-left{text-align: left;}
   .cta-graphics { min-height: 280px; }
   .newsletter { width: 100%; }
   .newsletter .input { width: 100%; }
-  .footer-columns { grid-template-columns: 1fr; }
-  .sub-footer-row { flex-direction: column; gap: 6px; padding: 10px 0; }
+  .footer-columns { grid-template-columns: 1fr 1fr; }
+  .sub-footer-row { gap: 6px; padding: 10px 20px; }
   .contact-info, .contact-form {flex: 1 1 100%;}
+  p.section-desc {text-align: right;}
 }
