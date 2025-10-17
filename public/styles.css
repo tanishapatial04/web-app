@@ -327,7 +327,7 @@ p.cta-text.text-left{text-align: left;}
 }
 
 @media (max-width: 768px) {
-  .testimonial-card {flex: 0 0 100%;}
+  .testimonial-card {flex: 0 0 100% !important;}
   .slider-btn {width: 32px;height: 32px;}
   .slides-track {gap: 5px;}
 }
