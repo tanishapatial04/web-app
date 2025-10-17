@@ -112,7 +112,7 @@ button, input, textarea, select { font-family: inherit; }
 p.cta-text.text-left{text-align: left;}
 /* Center the animation */
 .right-box {display: flex;justify-content: center;align-items: center;}
-.cta-cont {background: url('/assets/media/globe-3d.png');background-repeat: no-repeat;background-attachment: scroll;}
+.cta-cont {background: url('/assets/media/globe-3d.png');background-repeat: no-repeat;background-attachment: fixed;height:500px;}
 
 /* Forms and newsletter */
 .contact-section {padding: 6rem 0;}
