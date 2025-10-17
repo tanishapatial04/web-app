@@ -307,8 +307,6 @@ p.cta-text.text-left{text-align: left;}
   .testimonial-card {flex: 0 0 47%;}
 }
 
-
-
 @media (max-width: 769px) {
   .primary-nav { display: none; }
   .mobile-menu-toggle { display: flex; }
@@ -322,4 +320,8 @@ p.cta-text.text-left{text-align: left;}
   .sub-footer-row { gap: 6px; padding: 10px 20px; }
   .contact-info, .contact-form {flex: 1 1 100%;}
   p.section-desc {text-align: right;}
+}
+
+@media (max-width: 549px) {
+  .footer-columns { grid-template-columns: 1fr; }
 }
