@@ -109,6 +109,7 @@
   function initSlider() {
     const slider = document.querySelector(".testimonial-slider");
     if (!slider) return;
+
     const slidesWrap = slider.querySelector(".slides");
     const items = Array.from(slider.querySelectorAll(".testimonial-card"));
     const track = document.createElement("div");
@@ -117,10 +118,12 @@
     slidesWrap.appendChild(track);
 
     let index = 0;
-    const visibleSlides = 2; // 👈 how many visible at once
+    let visibleSlides = window.innerWidth < 864 ? 1 : 2; // responsive slides
 
     function sync() {
       track.style.transform = `translateX(${-index * (100 / visibleSlides)}%)`;
+      track.style.width = `${(items.length / visibleSlides) * 100}%`; // make track fill width
+      items.forEach(item => item.style.width = `${100 / items.length}%`); // distribute items
     }
 
     function next() {
@@ -149,6 +152,7 @@
     slider.addEventListener("mouseenter", stop);
     slider.addEventListener("mouseleave", start);
     start();
+
   }
 
   function initPortfolioFilters() {
