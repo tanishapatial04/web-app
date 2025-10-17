@@ -295,6 +295,10 @@ p.cta-text.text-left{text-align: left;}
   .site-main { padding: 40px 20px 40px 20px; }
 }
 
+@media only screen and (max-width: 1366px) {
+  .cta-cont img {width: 80%;}
+}
+
 @media (max-width: 640px) {
   .primary-nav { display: none; }
   .mobile-menu-toggle { display: flex; }
