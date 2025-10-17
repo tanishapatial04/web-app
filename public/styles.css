@@ -294,7 +294,7 @@ p.cta-text.text-left{text-align: left;}
 
 /* Responsive (preserve original breakpoint) */
 @media only screen and (max-width: 1440px) {
-  .site-main { padding: 40px 20px 40px 20px; }
+  .site-main { padding: 0px 20px 0px 20px; }
 }
 
 @media only screen and (max-width: 1366px) {
