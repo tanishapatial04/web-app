@@ -299,6 +299,10 @@ p.cta-text.text-left{text-align: left;}
   .cta-cont img {width: 80%;}
 }
 
+@media only screen and (max-width: 1024px) {
+  .testimonial-card {flex: 0 0 40%;}
+}
+
 @media (max-width: 640px) {
   .primary-nav { display: none; }
   .mobile-menu-toggle { display: flex; }
