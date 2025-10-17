@@ -333,6 +333,6 @@ p.cta-text.text-left{text-align: left;}
 }
 
 @media (max-width: 667px) {
-  .slides-track {gap: 0px;}
+  .slides-track {gap: 0px;margin-right:0px;margin-left:0px;}
   .footer-columns { grid-template-columns: 1fr; }
 }
