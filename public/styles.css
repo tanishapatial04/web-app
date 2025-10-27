@@ -288,7 +288,7 @@ font-weight: 400; }
 .about-highlights .highlight-card:nth-child(4) { animation: stagger-in .6s cubic-bezier(0.23, 1, 0.320, 1) .24s forwards; }
 
 .cta-section { padding-top: 0; }
-.cta-panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex;flex-direction: column; gap: 10px; text-align: center; transition: all .4s cubic-bezier(0.23, 1, 0.320, 1), box-shadow .4s ease; }
+.cta-panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex;flex-direction: column; gap: 10px;align-items: center; text-align: center; transition: all .4s cubic-bezier(0.23, 1, 0.320, 1), box-shadow .4s ease; }
 .cta-panel:hover { border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, var(--border)) inset, 0 8px 32px rgba(59,130,246,.12); }
 .cta-title { margin: 0; font-weight: 800; transition: color .3s ease; }
 .cta-text { margin: 0; transition: color .3s ease; }
