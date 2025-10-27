@@ -259,6 +259,7 @@ font-weight: 400; }
 /* About page */
 .about-illustration { padding-top: 0; }
 .team-illustration { position: relative; width: min(100%, 840px); margin: 0 auto; aspect-ratio: 16/9; border-radius: 16px; background: linear-gradient(180deg, rgba(17,24,39,.6), rgba(17,24,39,.2)); border: 1px solid var(--border); box-shadow: inset 0 0 0 1px rgba(255,255,255,.02), 0 10px 40px rgba(0,0,0,.5); overflow: hidden; }
+.team-illustration img{ width: -webkit-fill-available;}
 .team-canvas { position: absolute; inset: 0; background-image: radial-gradient(600px 400px at 20% 20%, rgba(59,130,246,.12), transparent 60%), radial-gradient(600px 400px at 80% 80%, rgba(167,139,250,.12), transparent 60%), repeating-linear-gradient(to right, rgba(255,255,255,.03) 0 1px, transparent 1px 80px), repeating-linear-gradient(to bottom, rgba(255,255,255,.03) 0 1px, transparent 1px 80px); }
 
 .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
