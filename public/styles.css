@@ -144,7 +144,8 @@ p.cta-text.text-left{text-align: left;}
 .service-row:nth-child(1) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .service-tile { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
 .tile-media { height: 240px; border-bottom: 1px solid var(--border); display: grid; place-items: center; transition: background-color .3s ease; }
-.vector-canvas { width: 90%; height: 70%; border-radius: 12px; background: linear-gradient(135deg, rgba(59,130,246,.18), rgba(167,139,250,.18)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.05); }
+.vector-canvas { width: 90%; height: 90%; border-radius: 12px; background: linear-gradient(135deg, rgba(59,130,246,.18), rgba(167,139,250,.18)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.05); }
+.vector-canvas img{width: 100%; height:100%;}
 .vc-blue { background: linear-gradient(135deg, rgba(59,130,246,.22), rgba(59,130,246,.08)); }
 .vc-purple { background: linear-gradient(135deg, rgba(167,139,250,.22), rgba(167,139,250,.08)); }
 .vc-mixed { background: linear-gradient(135deg, rgba(59,130,246,.18), rgba(167,139,250,.22)); }
