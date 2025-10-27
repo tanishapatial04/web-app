@@ -33,7 +33,7 @@ body { margin: 0; color: var(--text); background: var(--surface); font: 16px/1.6
 
 /* Buttons */
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; font-weight: 700; border-radius: 12px; text-decoration: none; transition: transform .24s cubic-bezier(0.23, 1, 0.320, 1), box-shadow .3s ease, background .2s ease; border: 1px solid var(--border); }
-.neon-cta { color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 28px rgba(59,130,246,.25), 0 12px 40px rgba(167,139,250,.18); border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); }
+.neon-cta {width:30%; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 28px rgba(59,130,246,.25), 0 12px 40px rgba(167,139,250,.18); border-color: color-mix(in srgb, var(--accent) 60%, var(--border)); }
 .neon-cta:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 12px 40px rgba(59,130,246,.35), 0 24px 60px rgba(167,139,250,.28); }
 .neon-cta:active { transform: translateY(-1px) scale(1.01); }
 .ghost-btn { color: var(--text); background: transparent; }
@@ -288,10 +288,9 @@ font-weight: 400; }
 .about-highlights .highlight-card:nth-child(4) { animation: stagger-in .6s cubic-bezier(0.23, 1, 0.320, 1) .24s forwards; }
 
 .cta-section { padding-top: 0; }
-.cta-panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: grid; gap: 10px; text-align: center; transition: all .4s cubic-bezier(0.23, 1, 0.320, 1), box-shadow .4s ease; }
+.cta-panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex;flex-direction: column; gap: 10px; text-align: center; transition: all .4s cubic-bezier(0.23, 1, 0.320, 1), box-shadow .4s ease; }
 .cta-panel:hover { border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, var(--border)) inset, 0 8px 32px rgba(59,130,246,.12); }
 .cta-title { margin: 0; font-weight: 800; transition: color .3s ease; }
-.cta-panel:hover .cta-title { color: var(--accent); }
 .cta-text { margin: 0; transition: color .3s ease; }
 
 /* Responsive (preserve original breakpoint) */
