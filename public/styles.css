@@ -277,7 +277,7 @@ box-shadow: 0 10px 16px rgba(20,20,20,0.06), 0 2px 4px rgba(20,20,20,0.04);overf
 height:56px;width:56px;border-radius:10px 10px 10px 10px;font-weight:800;box-shadow:0 6px 12px rgba(0,0,0,0.08);font-size:20px;}
 .tab::before{content:"";position:absolute;left:-26px;top:0;height:56px;width:56px;background:#332265;border-radius:50%;z-index:-1;}
 .icon {width:58px;height:58px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-.icon svg { width:42px; height:42px; stroke:#222; stroke-width:2; fill:none; }
+.icon svg {fill:#7c3bed; }
 .card h3 {display:inline-block;margin:0 0 10px 0;padding:8px 12px;background:#7c3bed1a;border-radius:4px;font-weight:700;color:#7c3bed;
 font-size:14px;letter-spacing:0.6px;}
 .card::after{content:"";display:block;position:absolute;left:22px;bottom:-12px;width:calc(100% - 44px);height:10px;background:linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));
