@@ -79,7 +79,7 @@ button, input, textarea, select { font-family: inherit; }
 .work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .work-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; position: relative; transition: all .3s cubic-bezier(0.23, 1, 0.320, 1); }
 /* .work-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, var(--border)) inset, 0 12px 32px rgba(59,130,246,.18); border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); } */
-.work-media { height: 140px; border-bottom: 1px solid var(--border); }
+.work-media { height: 240px; border-bottom: 1px solid var(--border); }
 .gradient-media { background-size: 200% 200%; animation: shift 6s ease-in-out infinite; }
 .gradient-blue { background-image: linear-gradient(135deg, rgba(59,130,246,.2), rgba(167,139,250,.2)); }
 .gradient-purple { background-image: linear-gradient(135deg, rgba(167,139,250,.25), rgba(59,130,246,.1)); }
