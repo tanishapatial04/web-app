@@ -4,7 +4,7 @@
     const tasks = [];
     document.querySelectorAll('[data-include="header"]').forEach((slot) => {
       tasks.push(
-        fetch("partials/header.html")
+        fetch("/partials/header.html")
           .then((r) => r.text())
           .then((html) => {
             slot.outerHTML = html;
@@ -13,7 +13,7 @@
     });
     document.querySelectorAll('[data-include="footer"]').forEach((slot) => {
       tasks.push(
-        fetch("partials/footer.html")
+        fetch("/partials/footer.html")
           .then((r) => r.text())
           .then((html) => {
             slot.outerHTML = html;
