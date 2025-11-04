@@ -26,26 +26,7 @@
         <p id="post-content"></p>
       </section>
     </main>
-    <script>
-      async function loadPost() {
-        const slug = window.location.pathname.split("/").pop();
-        const res = await fetch("/posts.json");
-        const posts = await res.json();
-        const post = posts.find((p) => p.slug === slug);
 
-        if (!post) {
-          document.getElementById("post-title").textContent =
-            "Post Not Found 😢";
-          return;
-        }
-
-        document.title = post.title;
-        document.getElementById("post-title").textContent = post.title;
-        document.getElementById("post-content").textContent = post.content;
-      }
-
-      loadPost();
-    </script>
     <div data-include="footer"></div>
     <script src="app.js" defer></script>
   </body>
