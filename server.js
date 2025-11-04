@@ -49,6 +49,11 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url);
   let pathname = parsedUrl.pathname || '/';
 
+  if (pathname.startsWith('/blog/')) {
+    const blogPage = path.join(PUBLIC_DIR, 'blog-single.html');
+    if (fs.existsSync(blogPage)) return sendFile(res, blogPage);
+  }
+  
   if (pathname === '/') pathname = '/index.html';
 
   const safePath = sanitize(pathname);

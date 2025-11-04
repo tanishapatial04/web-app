@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "modern-wordpress-blocks",
+    "title": "Modern WordPress Blocks",
+    "content": "Gutenberg isn’t just a page builder vibe — it’s a full-blown, composable UI system. Modern WordPress block development means building reusable components, optimizing asset loading, and avoiding bloat like your phone gallery after a trip. With block-based themes and server-side rendering, performance is built right into the design. The goal? Layout freedom, clean markup, and a front-end experience that loads fast enough to make impatient Gen Z users (aka all of us) chill. TL;DR: Blocks = future, classic editor = nostalgia but nope."
+  },
+  {
+    "slug": "secure-php-apis",
+    "title": "Secure PHP APIs",
+    "content": "PHP APIs in 2025 aren’t just about building endpoints and praying things don’t break. We’re talking authentication strategies that slap — JWTs, OAuth2, and proper session handling. Add rate-limiting so nobody tries to DDoS your vibes, monitoring so you catch issues before your client sends you the dreaded 'site broken??' screenshot, and sanitized inputs so nobody injects SQL like they're sneaking into backstage. Security isn’t optional — it’s the first feature."
+  },
+  {
+    "slug": "structured-data-for-seo",
+    "title": "Structured Data for SEO",
+    "content": "Search engines are smart, but they’re not psychic. Structured data (aka schema markup) helps Google understand your content like you're explaining it to a very polite but confused robot. Product reviews? Events? Articles? Local business? Schema gives you rich snippets, star ratings, FAQ dropdowns — all the shiny SERP real estate that boosts clicks like crazy. Translation: do schema, get visibility, enjoy ✨better CTR✨ and bragging rights."
+  },
+  {
+    "slug": "content-that-converts",
+    "title": "Content That Converts",
+    "content": "Content isn’t just words — it’s a strategy. Write with intention, not vibes only. Understand the user journey, focus on clarity, and sprinkle persuasion frameworks like AIDA & PAS (no, they're not K-pop groups). Great content guides users from curiosity to action without screaming 'BUY NOW!!' like a sketchy ad. Build editorial systems, templates, and processes so content scales — because consistency beats creativity bursts every time."
+  }
+]
