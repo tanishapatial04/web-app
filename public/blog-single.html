@@ -37,7 +37,6 @@
 
     <main class="site-main" role="main">
       <section class="container page-hero reveal">
-        <h1 id="post-title"></h1>
         <article class="blog-content"></article>
       </section>
     </main>
@@ -54,8 +53,6 @@
           return;
         }
 
-        document.title = post.title;
-        document.getElementById("post-title").textContent = post.title;
         document.querySelector(".blog-content").innerHTML = post.content;
       }
 
