@@ -15,11 +15,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/styles.css" />
-      <link rel="icon" href="/favicon/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="icon" href="/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
   </head>
   <body>
     <div class="bg-surface grid-overlay"></div>
@@ -28,7 +38,7 @@
     <main class="site-main" role="main">
       <section class="container page-hero reveal">
         <h1 id="post-title"></h1>
-        <p id="post-content"></p>
+        <article class="blog-content"></article>
       </section>
     </main>
     <script>
@@ -46,11 +56,12 @@
 
         document.title = post.title;
         document.getElementById("post-title").textContent = post.title;
-        document.getElementById("post-content").textContent = post.content;
+        document.getElementById("post-content").innerHTML = post.content;
       }
 
       loadPost();
     </script>
+
     <div data-include="footer"></div>
     <script src="/app.js" defer></script>
   </body>
