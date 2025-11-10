@@ -124,12 +124,12 @@
     <div data-include="footer"></div>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      emailjs.init("service_9m1yeuk"); // Get from EmailJS dashboard
+      emailjs.init("T2bWE0t00Y5Jh2nU6"); // Get from EmailJS dashboard
 
       document.querySelector('.contact-form').addEventListener('submit', function(e){
           e.preventDefault(); // stop page reload
 
-          emailjs.sendForm('service_9m1yeuk', 'f2flad6', this)
+          emailjs.sendForm('service_9m1yeuk', 'template_csou8km', this)
             .then(() => {
                 alert("Message sent successfully! We will get back to you soon.");
                 this.reset();
