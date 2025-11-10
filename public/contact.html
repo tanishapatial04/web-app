@@ -68,7 +68,7 @@
 
       <section class="container contact-section reveal">
         <div class="contact-grid">
-          <form class="contact-form gradient-border" action="#" method="post" onsubmit="return false;">
+          <form class="contact-form gradient-border" action="https://formsubmit.co/avap.tanisha@gmail.com" method="post">
             <div class="form-row">
               <label class="label" for="name">Name</label>
               <input class="input" id="name" name="name" type="text" required />
@@ -81,6 +81,10 @@
               <label class="label" for="message">Message</label>
               <textarea class="input textarea" id="message" name="message" rows="6" required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="New Contact Form Message!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+
             <button class="button neon-cta" type="submit">Send Message</button>
           </form>
           <aside class="contact-info">
