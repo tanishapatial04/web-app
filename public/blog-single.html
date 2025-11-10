@@ -77,7 +77,11 @@
 
     <main class="site-main" role="main">
       <section class="container page-hero reveal">
-        <article class="blog-content"></article>
+        <article class="blog-content">
+          <h1 id="post-title"></h1>
+          <p class="post-author"></p>
+          <div id="post-body"></div>
+        </article>
       </section>
     </main>
     <script>
@@ -86,19 +90,15 @@
         const res = await fetch("/posts.json");
         const posts = await res.json();
         const post = posts.find((p) => p.slug === slug);
-        const contentContainer = document.querySelector(".blog-content");
 
         if (!post) {
-          document.getElementById("post-title").textContent =
-            "Post Not Found 😢";
+          document.getElementById("post-title").textContent = "Post Not Found 😢";
           return;
         }
 
-        document.querySelector(".blog-content").innerHTML = post.content;
-        contentContainer.innerHTML = `
-          <p class="post-author">By <strong>DevAuraTech</strong></p>
-          ${post.content}
-        `;
+        document.getElementById("post-title").textContent = post.title;
+        document.querySelector(".post-author").innerHTML = `By <strong>DevTechAura</strong>`;
+        document.getElementById("post-body").innerHTML = post.content;
       }
 
       loadPost();

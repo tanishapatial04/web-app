@@ -163,6 +163,7 @@ p.cta-text.text-left{text-align: left;}
 .post-body { padding: 14px; display: grid; gap: 8px; }
 .post-title { margin: 0; font-weight: 700; }
 .post-excerpt { margin: 0; }
+.post-author {font-size: 14px; margin-bottom: 20px;font-style: italic;}
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
