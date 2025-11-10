@@ -81,10 +81,6 @@
               <label class="label" for="message">Message</label>
               <textarea class="input textarea" id="message" name="message" rows="6" required></textarea>
             </div>
-            <input type="hidden" name="_subject" value="New Contact Form Message!">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="box">
-
             <button class="button neon-cta" type="submit">Send Message</button>
           </form>
           <aside class="contact-info">
@@ -126,6 +122,22 @@
     </main>
 
     <div data-include="footer"></div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("service_9m1yeuk"); // Get from EmailJS dashboard
+
+      document.querySelector('.contact-form').addEventListener('submit', function(e){
+          e.preventDefault(); // stop page reload
+
+          emailjs.sendForm('service_9m1yeuk', 'f2flad6', this)
+            .then(() => {
+                alert("Message sent successfully! We will get back to you soon.");
+                this.reset();
+            }, (err) => {
+                alert("Failed to send message: " + JSON.stringify(err));
+            });
+      });
+    </script>
     <script src="app.js" defer></script>
   </body>
 </html>
