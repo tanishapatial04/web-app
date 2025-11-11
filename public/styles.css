@@ -380,6 +380,10 @@ border-radius:100%;filter:blur(4px);pointer-events:none;}
   .testimonial-card {flex: 0 0 47% !important;margin-right: 8px;margin-left: 8px;}
 }
 
+@media only screen and (max-width: 980px) {
+  .work-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+
 @media (max-width: 769px) {
   .primary-nav { display: none; }
   .mobile-menu-toggle { display: flex; }
