@@ -1,15 +1,15 @@
 <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad-data-1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="seo-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="grad-data-2" x1="100%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="seo-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
     </linearGradient>
-    <filter id="glow-data">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+    <filter id="seo-glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -17,74 +17,65 @@
     </filter>
   </defs>
   
-  <!-- Background -->
-  <rect width="400" height="320" fill="#0b0f1a" opacity="0.3"/>
+  <!-- Left column - Data boxes -->
+  <rect x="20" y="45" width="60" height="40" rx="5" fill="url(#seo-grad-1)" opacity="0.8" filter="url(#seo-glow)"/>
+  <text x="50" y="68" font-size="11" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.8">Data</text>
   
-  <!-- Left Column - Data Structure -->
-  <g filter="url(#glow-data)">
-    <!-- Top box -->
-    <rect x="30" y="40" width="70" height="50" rx="6" fill="url(#grad-data-1)" opacity="0.8"/>
-    <text x="65" y="72" font-size="12" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.8">Data</text>
-    
-    <!-- Connection line -->
-    <line x1="65" y1="90" x2="65" y2="110" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
-    
-    <!-- Middle left box -->
-    <rect x="30" y="110" width="70" height="50" rx="6" fill="url(#grad-data-2)" opacity="0.8"/>
-    <text x="65" y="142" font-size="12" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.8">Schema</text>
-    
-    <!-- Connection line -->
-    <line x1="65" y1="160" x2="65" y2="180" stroke="#a78bfa" stroke-width="2" opacity="0.5"/>
-    
-    <!-- Bottom left box -->
-    <rect x="30" y="180" width="70" height="50" rx="6" fill="url(#grad-data-1)" opacity="0.8"/>
-    <text x="65" y="212" font-size="12" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.8">SEO</text>
-  </g>
+  <rect x="20" y="110" width="60" height="40" rx="5" fill="url(#seo-grad-2)" opacity="0.8" filter="url(#seo-glow)"/>
+  <text x="50" y="133" font-size="11" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.8">Schema</text>
   
-  <!-- Center - Connecting nodes -->
-  <circle cx="150" cy="65" r="12" fill="url(#grad-data-2)" opacity="0.7" filter="url(#glow-data)"/>
-  <circle cx="150" cy="135" r="12" fill="url(#grad-data-1)" opacity="0.7" filter="url(#glow-data)"/>
-  <circle cx="150" cy="205" r="12" fill="url(#grad-data-2)" opacity="0.7" filter="url(#glow-data)"/>
+  <rect x="20" y="175" width="60" height="40" rx="5" fill="url(#seo-grad-1)" opacity="0.8" filter="url(#seo-glow)"/>
+  <text x="50" y="198" font-size="11" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.8">SEO</text>
   
-  <!-- Connecting lines from left to center -->
-  <line x1="100" y1="65" x2="138" y2="65" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
-  <line x1="100" y1="135" x2="138" y2="135" stroke="#a78bfa" stroke-width="2" opacity="0.4"/>
-  <line x1="100" y1="205" x2="138" y2="205" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <!-- Center connectors -->
+  <circle cx="110" cy="65" r="8" fill="url(#seo-grad-2)" opacity="0.7" filter="url(#seo-glow)"/>
+  <circle cx="110" cy="130" r="8" fill="url(#seo-grad-1)" opacity="0.7" filter="url(#seo-glow)"/>
+  <circle cx="110" cy="195" r="8" fill="url(#seo-grad-2)" opacity="0.7" filter="url(#seo-glow)"/>
   
-  <!-- Right side - Expanding data -->
-  <g filter="url(#glow-data)">
-    <!-- Right top boxes -->
-    <rect x="210" y="50" width="65" height="35" rx="5" fill="url(#grad-data-1)" opacity="0.7"/>
-    <text x="242" y="72" font-size="10" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.7">Type</text>
-    
-    <rect x="295" y="50" width="65" height="35" rx="5" fill="url(#grad-data-2)" opacity="0.7"/>
-    <text x="327" y="72" font-size="10" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.7">Props</text>
-    
-    <!-- Right middle boxes -->
-    <rect x="210" y="120" width="65" height="35" rx="5" fill="url(#grad-data-2)" opacity="0.7"/>
-    <text x="242" y="142" font-size="10" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.7">Value</text>
-    
-    <rect x="295" y="120" width="65" height="35" rx="5" fill="url(#grad-data-1)" opacity="0.7"/>
-    <text x="327" y="142" font-size="10" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.7">Meta</text>
-    
-    <!-- Right bottom boxes -->
-    <rect x="210" y="190" width="65" height="35" rx="5" fill="url(#grad-data-1)" opacity="0.7"/>
-    <text x="242" y="212" font-size="10" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.7">Rich</text>
-    
-    <rect x="295" y="190" width="65" height="35" rx="5" fill="url(#grad-data-2)" opacity="0.7"/>
-    <text x="327" y="212" font-size="10" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.7">Snippet</text>
-  </g>
+  <!-- Right column - Property boxes -->
+  <rect x="150" y="40" width="50" height="30" rx="4" fill="url(#seo-grad-1)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="175" y="60" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Type</text>
   
-  <!-- Connection lines from center to right -->
-  <line x1="162" y1="65" x2="210" y2="65" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
-  <line x1="162" y1="65" x2="295" y2="65" stroke="#a78bfa" stroke-width="2" opacity="0.4"/>
-  <line x1="162" y1="135" x2="210" y2="135" stroke="#a78bfa" stroke-width="2" opacity="0.4"/>
-  <line x1="162" y1="135" x2="295" y2="135" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
-  <line x1="162" y1="205" x2="210" y2="205" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
-  <line x1="162" y1="205" x2="295" y2="205" stroke="#a78bfa" stroke-width="2" opacity="0.4"/>
+  <rect x="210" y="40" width="50" height="30" rx="4" fill="url(#seo-grad-2)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="235" y="60" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Props</text>
   
-  <!-- Bottom indicator -->
-  <circle cx="150" cy="275" r="4" fill="#3b82f6" opacity="0.6" filter="url(#glow-data)"/>
-  <circle cx="170" cy="275" r="4" fill="#a78bfa" opacity="0.6" filter="url(#glow-data)"/>
-  <circle cx="190" cy="275" r="4" fill="#3b82f6" opacity="0.6" filter="url(#glow-data)"/>
+  <rect x="270" y="40" width="50" height="30" rx="4" fill="url(#seo-grad-1)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="295" y="60" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Value</text>
+  
+  <!-- Middle row -->
+  <rect x="150" y="105" width="50" height="30" rx="4" fill="url(#seo-grad-2)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="175" y="125" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Tags</text>
+  
+  <rect x="210" y="105" width="50" height="30" rx="4" fill="url(#seo-grad-1)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="235" y="125" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Meta</text>
+  
+  <rect x="270" y="105" width="50" height="30" rx="4" fill="url(#seo-grad-2)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="295" y="125" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Attrs</text>
+  
+  <!-- Bottom row -->
+  <rect x="150" y="170" width="50" height="30" rx="4" fill="url(#seo-grad-1)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="175" y="190" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Rich</text>
+  
+  <rect x="210" y="170" width="50" height="30" rx="4" fill="url(#seo-grad-2)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="235" y="190" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">Data</text>
+  
+  <rect x="270" y="170" width="50" height="30" rx="4" fill="url(#seo-grad-1)" opacity="0.7" filter="url(#seo-glow)"/>
+  <text x="295" y="190" font-size="9" fill="#e6e6e6" text-anchor="middle" font-weight="600" opacity="0.75">JSON</text>
+  
+  <!-- Connection lines -->
+  <line x1="80" y1="65" x2="102" y2="65" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+  <line x1="80" y1="130" x2="102" y2="130" stroke="#a78bfa" stroke-width="1.5" opacity="0.4"/>
+  <line x1="80" y1="195" x2="102" y2="195" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+  
+  <line x1="118" y1="65" x2="150" y2="55" stroke="#3b82f6" stroke-width="1.5" opacity="0.3"/>
+  <line x1="118" y1="65" x2="210" y2="55" stroke="#a78bfa" stroke-width="1.5" opacity="0.3"/>
+  <line x1="118" y1="65" x2="270" y2="55" stroke="#3b82f6" stroke-width="1.5" opacity="0.3"/>
+  
+  <line x1="118" y1="130" x2="150" y2="120" stroke="#a78bfa" stroke-width="1.5" opacity="0.3"/>
+  <line x1="118" y1="130" x2="210" y2="120" stroke="#3b82f6" stroke-width="1.5" opacity="0.3"/>
+  <line x1="118" y1="130" x2="270" y2="120" stroke="#a78bfa" stroke-width="1.5" opacity="0.3"/>
+  
+  <line x1="118" y1="195" x2="150" y2="185" stroke="#3b82f6" stroke-width="1.5" opacity="0.3"/>
+  <line x1="118" y1="195" x2="210" y2="185" stroke="#a78bfa" stroke-width="1.5" opacity="0.3"/>
+  <line x1="118" y1="195" x2="270" y2="185" stroke="#3b82f6" stroke-width="1.5" opacity="0.3"/>
 </svg>
