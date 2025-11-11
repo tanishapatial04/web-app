@@ -1,15 +1,15 @@
 <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad-blue-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="wp-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="grad-purple-blue" x1="100%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="wp-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+    <filter id="wp-glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -17,45 +17,42 @@
     </filter>
   </defs>
   
-  <!-- Background -->
-  <rect width="400" height="320" fill="#0b0f1a" opacity="0.3"/>
+  <!-- Top row blocks -->
+  <rect x="35" y="35" width="80" height="75" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="48" y="50" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="48" y="68" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="48" y="78" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <!-- Block 1 - Top Left -->
-  <rect x="40" y="40" width="90" height="100" rx="8" fill="url(#grad-blue-purple)" opacity="0.8" filter="url(#glow)"/>
-  <rect x="50" y="50" width="70" height="35" rx="4" fill="#111827" opacity="0.6"/>
-  <circle cx="85" cy="105" r="8" fill="#e6e6e6" opacity="0.7"/>
+  <rect x="155" y="35" width="80" height="75" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="168" y="50" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="168" y="68" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="168" y="78" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <!-- Block 2 - Top Center -->
-  <rect x="155" y="30" width="90" height="110" rx="8" fill="url(#grad-purple-blue)" opacity="0.8" filter="url(#glow)"/>
-  <rect x="165" y="40" width="70" height="40" rx="4" fill="#111827" opacity="0.6"/>
-  <circle cx="200" cy="95" r="6" fill="#e6e6e6" opacity="0.7"/>
-  <circle cx="200" cy="115" r="6" fill="#e6e6e6" opacity="0.7"/>
+  <rect x="275" y="35" width="80" height="75" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="288" y="50" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="288" y="68" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="288" y="78" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <!-- Block 3 - Top Right -->
-  <rect x="270" y="50" width="90" height="90" rx="8" fill="url(#grad-blue-purple)" opacity="0.8" filter="url(#glow)"/>
-  <rect x="280" y="60" width="70" height="30" rx="4" fill="#111827" opacity="0.6"/>
-  <rect x="280" y="95" width="70" height="30" rx="4" fill="#111827" opacity="0.6"/>
+  <!-- Middle row blocks -->
+  <rect x="35" y="135" width="80" height="75" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="48" y="150" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="48" y="168" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="48" y="178" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <!-- Block 4 - Bottom Left -->
-  <rect x="50" y="165" width="100" height="105" rx="8" fill="url(#grad-purple-blue)" opacity="0.8" filter="url(#glow)"/>
-  <rect x="60" y="175" width="80" height="35" rx="4" fill="#111827" opacity="0.6"/>
-  <rect x="60" y="220" width="80" height="40" rx="4" fill="#111827" opacity="0.6"/>
+  <rect x="155" y="135" width="80" height="75" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="168" y="150" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="168" y="168" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="168" y="178" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <!-- Block 5 - Bottom Center -->
-  <rect x="170" y="175" width="85" height="105" rx="8" fill="url(#grad-blue-purple)" opacity="0.8" filter="url(#glow)"/>
-  <circle cx="212" cy="185" r="12" fill="#e6e6e6" opacity="0.5"/>
-  <rect x="180" y="215" width="65" height="25" rx="4" fill="#111827" opacity="0.6"/>
-  <rect x="180" y="250" width="65" height="20" rx="3" fill="#111827" opacity="0.6"/>
+  <rect x="275" y="135" width="80" height="75" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="288" y="150" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="288" y="168" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="288" y="178" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <!-- Block 6 - Bottom Right -->
-  <rect x="280" y="165" width="85" height="105" rx="8" fill="url(#grad-purple-blue)" opacity="0.8" filter="url(#glow)"/>
-  <rect x="290" y="175" width="65" height="30" rx="4" fill="#111827" opacity="0.6"/>
-  <circle cx="322" cy="230" r="10" fill="#e6e6e6" opacity="0.5"/>
-  <circle cx="322" cy="265" r="10" fill="#e6e6e6" opacity="0.5"/>
-  
-  <!-- Connecting lines -->
-  <line x1="130" y1="85" x2="155" y2="85" stroke="#3b82f6" stroke-width="2" opacity="0.4" stroke-dasharray="5,5"/>
-  <line x1="245" y1="95" x2="270" y2="95" stroke="#a78bfa" stroke-width="2" opacity="0.4" stroke-dasharray="5,5"/>
-  <line x1="100" y1="155" x2="100" y2="165" stroke="#3b82f6" stroke-width="2" opacity="0.4" stroke-dasharray="5,5"/>
-  <line x1="212" y1="155" x2="212" y2="175" stroke="#a78bfa" stroke-width="2" opacity="0.4" stroke-dasharray="5,5"/>
+  <!-- Connector lines between blocks -->
+  <line x1="115" y1="72" x2="155" y2="72" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="235" y1="72" x2="275" y2="72" stroke="#a78bfa" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="75" y1="110" x2="75" y2="135" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="195" y1="110" x2="195" y2="135" stroke="#a78bfa" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="315" y1="110" x2="315" y2="135" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
 </svg>
