@@ -594,7 +594,21 @@
     </main>
 
     <div data-include="footer"></div>
+    <script>
+      emailjs.init("T2bWE0t00Y5Jh2nU6"); // Get from EmailJS dashboard
 
+      document.querySelector('.contact-form').addEventListener('submit', function(e){
+          e.preventDefault(); // stop page reload
+
+          emailjs.sendForm('service_9m1yeuk', 'template_csou8km', this)
+            .then(() => {
+                alert("Message sent successfully! We will get back to you soon.");
+                this.reset();
+            }, (err) => {
+                alert("Failed to send message: " + JSON.stringify(err));
+            });
+      });
+    </script>
     <script src="app.js" defer></script>
   </body>
 </html>
