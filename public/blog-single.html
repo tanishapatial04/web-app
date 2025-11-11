@@ -16,21 +16,10 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/favicon/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <!-- DataForge Analytics -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
     <script>
       (function() {
         window.dataForge = {
@@ -39,14 +28,12 @@
           apiUrl: 'https://29854ad9-e857-4ef0-ba55-f5e18075b587.preview.emergentagent.com/api'
         };
         
-        // Generate session ID
         let sessionId = sessionStorage.getItem('df_session');
         if (!sessionId) {
           sessionId = 'sess_' + Math.random().toString(36).substr(2, 9);
           sessionStorage.setItem('df_session', sessionId);
         }
         
-        // Track function
         window.dataForge.track = function(eventType, eventData) {
           fetch(window.dataForge.apiUrl + '/track', {
             method: 'POST',
@@ -66,7 +53,6 @@
           });
         };
         
-        // Auto-track pageview
         window.dataForge.track('pageview');
       })();
     </script>
@@ -76,14 +62,93 @@
     <div data-include="header"></div>
 
     <main class="site-main" role="main">
-      <section class="container page-hero reveal">
-        <article class="blog-content">
-          <h1 id="post-title"></h1>
-          <p class="post-author"></p>
-          <div id="post-body"></div>
+      <!-- Hero section with featured image -->
+      <section class="blog-hero reveal">
+        <div class="blog-hero-bg">
+          <img id="featured-image" src="" alt="Featured image" class="hero-featured-img">
+        </div>
+        <div class="blog-hero-content">
+          <div class="container">
+            <div class="blog-meta-header">
+              <span class="blog-category" id="blog-category"></span>
+              <span class="blog-meta-divider">•</span>
+              <span class="blog-date" id="blog-date"></span>
+              <span class="blog-meta-divider">•</span>
+              <span class="blog-reading-time" id="blog-reading-time"></span>
+            </div>
+            <h1 id="post-title" class="blog-page-title"></h1>
+            <p id="post-excerpt" class="blog-excerpt"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main article content -->
+      <section class="container blog-article-section reveal">
+        <article class="blog-article-wrapper">
+          <div class="blog-content-main">
+            <div id="post-body" class="blog-content"></div>
+          </div>
+          
+          <!-- Sidebar -->
+          <aside class="blog-sidebar">
+            <!-- Author card -->
+            <div class="author-card">
+              <div class="author-icon">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <div class="author-info">
+                <h3>About Author</h3>
+                <p class="author-name">DevAuraTech</p>
+                <p class="author-bio">Modern web developer sharing insights on engineering, SEO, and growth strategies.</p>
+              </div>
+            </div>
+
+            <!-- Share section -->
+            <div class="share-section">
+              <h3>Share This Post</h3>
+              <div class="share-buttons">
+                <a href="#" class="share-btn" title="Share on LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="share-btn" title="Share on Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="share-btn" title="Share on Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="share-btn" title="Copy Link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </aside>
         </article>
       </section>
+
+      <!-- CTA section -->
+      <section class="blog-cta-section reveal">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Elevate Your Web Strategy?</h2>
+            <p>Get expert insights delivered to your inbox. Stay ahead of the curve with engineering tips, SEO strategies, and growth hacks.</p>
+            <a href="/contact.html" class="button neon-cta">Get Started Today</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related posts -->
+      <section class="blog-related-section reveal">
+        <div class="container">
+          <h2>Related Articles</h2>
+          <div class="related-posts-grid" id="related-posts">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </section>
     </main>
+
+    <div data-include="footer"></div>
+    <script src="/app.js" defer></script>
     <script>
       async function loadPost() {
         const slug = window.location.pathname.split("/").pop();
@@ -96,15 +161,53 @@
           return;
         }
 
+        // Update page title
+        document.title = post.title + " — DevAuraTech";
+
+        // Set hero content
+        document.getElementById("featured-image").src = post.image;
+        document.getElementById("featured-image").alt = post.title;
         document.getElementById("post-title").textContent = post.title;
-        document.querySelector(".post-author").innerHTML = `By <strong>DevTechAura</strong>`;
+        document.getElementById("post-excerpt").textContent = post.excerpt;
+        document.getElementById("blog-category").textContent = post.category;
+        document.getElementById("blog-date").textContent = post.date;
+        document.getElementById("blog-reading-time").textContent = post.readingTime;
+
+        // Set article content
         document.getElementById("post-body").innerHTML = post.content;
+
+        // Load related posts
+        loadRelatedPosts(posts, post.slug, post.category);
+      }
+
+      function loadRelatedPosts(posts, currentSlug, currentCategory) {
+        const related = posts
+          .filter(p => p.slug !== currentSlug && p.category === currentCategory)
+          .slice(0, 3);
+
+        const relatedContainer = document.getElementById("related-posts");
+        
+        if (related.length === 0) {
+          relatedContainer.innerHTML = '<p class="no-posts">No related articles found.</p>';
+          return;
+        }
+
+        relatedContainer.innerHTML = related
+          .map(post => `
+            <a href="/blog/${post.slug}" class="related-post-card">
+              <div class="related-post-img">
+                <img src="${post.image}" alt="${post.title}">
+              </div>
+              <div class="related-post-content">
+                <h3>${post.title}</h3>
+                <p class="related-post-meta">${post.readingTime}</p>
+              </div>
+            </a>
+          `)
+          .join("");
       }
 
       loadPost();
     </script>
-
-    <div data-include="footer"></div>
-    <script src="/app.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lock-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lock-grad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="lock-glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main lock body -->
+  <rect x="150" y="80" width="100" height="110" rx="8" fill="url(#lock-grad-1)" opacity="0.8" filter="url(#lock-glow)"/>
+  
+  <!-- Lock shackle (top arc) -->
+  <path d="M 165 80 Q 165 50 200 50 Q 235 50 235 80" fill="none" stroke="url(#lock-grad-2)" stroke-width="12" stroke-linecap="round" opacity="0.8" filter="url(#lock-glow)"/>
+  
+  <!-- Lock keyhole -->
+  <circle cx="200" cy="140" r="14" fill="#111827" opacity="0.7"/>
+  <circle cx="200" cy="140" r="8" fill="#0b0f1a" opacity="0.9"/>
+  <circle cx="200" cy="140" r="4" fill="#3b82f6" opacity="0.6"/>
+  
+  <!-- Left shield -->
+  <path d="M 70 100 L 70 160 Q 70 180 85 195 Q 100 180 100 160 L 100 100 Z" fill="url(#lock-grad-2)" opacity="0.7" filter="url(#lock-glow)"/>
+  <path d="M 78 110 L 78 155 Q 78 170 85 180 Q 92 170 92 155 L 92 110 Z" fill="#111827" opacity="0.5"/>
+  
+  <!-- Right shield -->
+  <path d="M 300 100 L 300 160 Q 300 180 315 195 Q 330 180 330 160 L 330 100 Z" fill="url(#lock-grad-1)" opacity="0.7" filter="url(#lock-glow)"/>
+  <path d="M 308 110 L 308 155 Q 308 170 315 180 Q 322 170 322 155 L 322 110 Z" fill="#111827" opacity="0.5"/>
+  
+  <!-- Bottom nodes -->
+  <circle cx="85" cy="260" r="12" fill="url(#lock-grad-2)" opacity="0.6" filter="url(#lock-glow)"/>
+  <circle cx="200" cy="260" r="12" fill="url(#lock-grad-1)" opacity="0.6" filter="url(#lock-glow)"/>
+  <circle cx="315" cy="260" r="12" fill="url(#lock-grad-2)" opacity="0.6" filter="url(#lock-glow)"/>
+  
+  <!-- Connection lines -->
+  <line x1="85" y1="210" x2="85" y2="248" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+  <line x1="200" y1="210" x2="200" y2="248" stroke="#a78bfa" stroke-width="1.5" opacity="0.4"/>
+  <line x1="315" y1="210" x2="315" y2="248" stroke="#3b82f6" stroke-width="1.5" opacity="0.4"/>
+</svg>
