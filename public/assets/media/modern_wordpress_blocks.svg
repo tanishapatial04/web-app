@@ -18,41 +18,46 @@
   </defs>
   
   <!-- Top row blocks -->
-  <rect x="35" y="35" width="80" height="75" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
-  <rect x="48" y="50" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="35" y="40" width="80" height="70" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="48" y="53" width="54" height="9" rx="2" fill="#111827" opacity="0.5"/>
   <rect x="48" y="68" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
-  <rect x="48" y="78" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="48" y="77" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <rect x="155" y="35" width="80" height="75" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
-  <rect x="168" y="50" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="155" y="40" width="80" height="70" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="168" y="53" width="54" height="9" rx="2" fill="#111827" opacity="0.5"/>
   <rect x="168" y="68" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
-  <rect x="168" y="78" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="168" y="77" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <rect x="275" y="35" width="80" height="75" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
-  <rect x="288" y="50" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="275" y="40" width="80" height="70" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="288" y="53" width="54" height="9" rx="2" fill="#111827" opacity="0.5"/>
   <rect x="288" y="68" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
-  <rect x="288" y="78" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="288" y="77" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
   <!-- Middle row blocks -->
-  <rect x="35" y="135" width="80" height="75" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
-  <rect x="48" y="150" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
-  <rect x="48" y="168" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
-  <rect x="48" y="178" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="35" y="135" width="80" height="70" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="48" y="148" width="54" height="9" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="48" y="163" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="48" y="172" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <rect x="155" y="135" width="80" height="75" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
-  <rect x="168" y="150" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
-  <rect x="168" y="168" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
-  <rect x="168" y="178" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="155" y="135" width="80" height="70" rx="6" fill="url(#wp-grad-1)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="168" y="148" width="54" height="9" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="168" y="163" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="168" y="172" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
-  <rect x="275" y="135" width="80" height="75" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
-  <rect x="288" y="150" width="54" height="10" rx="2" fill="#111827" opacity="0.5"/>
-  <rect x="288" y="168" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
-  <rect x="288" y="178" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="275" y="135" width="80" height="70" rx="6" fill="url(#wp-grad-2)" opacity="0.8" filter="url(#wp-glow)"/>
+  <rect x="288" y="148" width="54" height="9" rx="2" fill="#111827" opacity="0.5"/>
+  <rect x="288" y="163" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
+  <rect x="288" y="172" width="54" height="6" rx="1" fill="#111827" opacity="0.4"/>
   
   <!-- Connector lines between blocks -->
-  <line x1="115" y1="72" x2="155" y2="72" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
-  <line x1="235" y1="72" x2="275" y2="72" stroke="#a78bfa" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="115" y1="75" x2="155" y2="75" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  <line x1="235" y1="75" x2="275" y2="75" stroke="#a78bfa" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
   <line x1="75" y1="110" x2="75" y2="135" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
   <line x1="195" y1="110" x2="195" y2="135" stroke="#a78bfa" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
   <line x1="315" y1="110" x2="315" y2="135" stroke="#3b82f6" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,3"/>
+  
+  <!-- Spacing bottom indicator dots -->
+  <circle cx="75" cy="240" r="4" fill="url(#wp-grad-1)" opacity="0.4" filter="url(#wp-glow)"/>
+  <circle cx="195" cy="240" r="4" fill="url(#wp-grad-2)" opacity="0.4" filter="url(#wp-glow)"/>
+  <circle cx="315" cy="240" r="4" fill="url(#wp-grad-1)" opacity="0.4" filter="url(#wp-glow)"/>
 </svg>
