@@ -1,0 +1,70 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-lock-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad-lock-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow-lock">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="320" fill="#0b0f1a" opacity="0.3"/>
+  
+  <!-- Large Lock - Center -->
+  <g filter="url(#glow-lock)">
+    <!-- Lock body -->
+    <rect x="140" y="110" width="120" height="120" rx="12" fill="url(#grad-lock-1)" opacity="0.8"/>
+    
+    <!-- Lock shackle -->
+    <path d="M 160 110 Q 160 60 200 60 Q 240 60 240 110" fill="none" stroke="url(#grad-lock-2)" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- Lock hole -->
+    <circle cx="200" cy="165" r="18" fill="#111827" opacity="0.7"/>
+    <circle cx="200" cy="165" r="12" fill="#0b0f1a" opacity="0.9"/>
+    <circle cx="200" cy="165" r="6" fill="#3b82f6" opacity="0.5"/>
+  </g>
+  
+  <!-- Shield - Left -->
+  <g filter="url(#glow-lock)">
+    <path d="M 60 80 L 60 140 Q 60 180 85 200 Q 85 180 110 140 L 110 80 Z" fill="url(#grad-lock-2)" opacity="0.7" stroke="#3b82f6" stroke-width="2"/>
+    <path d="M 70 95 L 70 140 Q 70 165 85 180 Q 100 165 100 140 L 100 95 Z" fill="#111827" opacity="0.5"/>
+    <circle cx="85" cy="130" r="8" fill="#e6e6e6" opacity="0.6"/>
+  </g>
+  
+  <!-- Shield - Right -->
+  <g filter="url(#glow-lock)">
+    <path d="M 290 80 L 290 140 Q 290 180 315 200 Q 315 180 340 140 L 340 80 Z" fill="url(#grad-lock-1)" opacity="0.7" stroke="#a78bfa" stroke-width="2"/>
+    <path d="M 300 95 L 300 140 Q 300 165 315 180 Q 330 165 330 140 L 330 95 Z" fill="#111827" opacity="0.5"/>
+    <path d="M 310 125 L 320 135 L 310 145" fill="none" stroke="#e6e6e6" stroke-width="2" opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Data nodes bottom -->
+  <circle cx="80" cy="260" r="18" fill="url(#grad-lock-2)" opacity="0.6" filter="url(#glow-lock)"/>
+  <circle cx="80" cy="260" r="10" fill="#111827" opacity="0.6"/>
+  <circle cx="80" cy="260" r="6" fill="#3b82f6" opacity="0.5"/>
+  
+  <circle cx="200" cy="260" r="18" fill="url(#grad-lock-1)" opacity="0.6" filter="url(#glow-lock)"/>
+  <circle cx="200" cy="260" r="10" fill="#111827" opacity="0.6"/>
+  <circle cx="200" cy="260" r="6" fill="#a78bfa" opacity="0.5"/>
+  
+  <circle cx="320" cy="260" r="18" fill="url(#grad-lock-2)" opacity="0.6" filter="url(#glow-lock)"/>
+  <circle cx="320" cy="260" r="10" fill="#111827" opacity="0.6"/>
+  <circle cx="320" cy="260" r="6" fill="#3b82f6" opacity="0.5"/>
+  
+  <!-- Connection lines -->
+  <line x1="125" y1="180" x2="160" y2="200" stroke="#3b82f6" stroke-width="2" opacity="0.4" stroke-dasharray="5,5"/>
+  <line x1="240" y1="200" x2="290" y2="180" stroke="#a78bfa" stroke-width="2" opacity="0.4" stroke-dasharray="5,5"/>
+  <line x1="200" y1="230" x2="200" y2="242" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="80" y1="242" x2="200" y2="242" stroke="#a78bfa" stroke-width="2" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="200" y1="242" x2="320" y2="242" stroke="#3b82f6" stroke-width="2" opacity="0.3" stroke-dasharray="4,4"/>
+</svg>
