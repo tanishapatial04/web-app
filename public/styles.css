@@ -395,6 +395,10 @@ border-radius:100%;filter:blur(4px);pointer-events:none;}
   p.section-desc {text-align: right;}
   blockquote.quote, figcaption.cite {font-size: 12px;margin: 0 auto;}
   span.avatar {width: 30px;height: 30px;}
+  .blog-article-wrapper { grid-template-columns: 1fr; }
+  .blog-sidebar { position: static; }
+  .blog-page-title { font-size: clamp(24px, 4vw, 32px); }
+  .related-posts-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
