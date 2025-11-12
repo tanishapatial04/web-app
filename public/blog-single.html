@@ -186,7 +186,7 @@
           .slice(0, 3);
 
         const relatedContainer = document.getElementById("related-posts");
-        
+
         if (related.length === 0) {
           relatedContainer.innerHTML = '<p class="no-posts">No related articles found.</p>';
           return;
@@ -207,7 +207,58 @@
           .join("");
       }
 
+      function setupShareButtons(postTitle, postSlug) {
+        const postUrl = window.location.href;
+        const encodedUrl = encodeURIComponent(postUrl);
+        const encodedTitle = encodeURIComponent(postTitle);
+
+        const twitterBtn = document.querySelector('[title="Share on Twitter"]');
+        const facebookBtn = document.querySelector('[title="Share on Facebook"]');
+        const linkedinBtn = document.querySelector('[title="Share on LinkedIn"]');
+        const copyBtn = document.querySelector('[title="Copy Link"]');
+
+        if (twitterBtn) {
+          twitterBtn.href = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=DevAuraTech`;
+          twitterBtn.target = '_blank';
+          twitterBtn.rel = 'noopener noreferrer';
+        }
+
+        if (facebookBtn) {
+          facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+          facebookBtn.target = '_blank';
+          facebookBtn.rel = 'noopener noreferrer';
+        }
+
+        if (linkedinBtn) {
+          linkedinBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+          linkedinBtn.target = '_blank';
+          linkedinBtn.rel = 'noopener noreferrer';
+        }
+
+        if (copyBtn) {
+          copyBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            navigator.clipboard.writeText(postUrl).then(() => {
+              const originalTitle = copyBtn.title;
+              copyBtn.title = 'Link copied!';
+              setTimeout(() => {
+                copyBtn.title = originalTitle;
+              }, 2000);
+            }).catch(err => {
+              console.error('Failed to copy link:', err);
+              alert('Failed to copy link to clipboard');
+            });
+          });
+        }
+      }
+
       loadPost();
+
+      // Setup share buttons after post is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        const postTitle = document.getElementById('post-title').textContent;
+        setupShareButtons(postTitle);
+      });
     </script>
   </body>
 </html>
