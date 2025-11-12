@@ -90,99 +90,101 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
-                <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#06b6d4" />
-                  <stop offset="100%" stop-color="#0891b2" />
+                <linearGradient id="grad-blue-site" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)" />
+                  <stop offset="100%" stop-color="#2563eb" />
                 </linearGradient>
-                <linearGradient id="grad-purple" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#a78bfa" />
-                  <stop offset="100%" stop-color="#7c3aed" />
-                </linearGradient>
-                <linearGradient id="grad-teal" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#14b8a6" />
-                  <stop offset="100%" stop-color="#0d9488" />
+                <linearGradient id="grad-purple-site" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="var(--accent-2)" />
+                  <stop offset="100%" stop-color="#9333ea" />
                 </linearGradient>
                 <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.3" />
+                  <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.25" />
                 </filter>
               </defs>
 
               <!-- Decorative gear (top right, light) -->
-              <g opacity="0.15" transform="translate(280, 30)">
-                <circle cx="0" cy="0" r="20" fill="none" stroke="var(--accent-2)" stroke-width="1" />
-                <circle cx="0" cy="0" r="12" fill="none" stroke="var(--accent-2)" stroke-width="1" />
-                <line x1="0" y1="-20" x2="0" y2="-25" stroke="var(--accent-2)" stroke-width="1" />
-                <line x1="20" y1="0" x2="25" y2="0" stroke="var(--accent-2)" stroke-width="1" />
-                <line x1="0" y1="20" x2="0" y2="25" stroke="var(--accent-2)" stroke-width="1" />
-                <line x1="-20" y1="0" x2="-25" y2="0" stroke="var(--accent-2)" stroke-width="1" />
+              <g opacity="0.12" transform="translate(290, 25)">
+                <circle cx="0" cy="0" r="22" fill="none" stroke="var(--accent-2)" stroke-width="1.5" />
+                <circle cx="0" cy="0" r="14" fill="none" stroke="var(--accent-2)" stroke-width="1" />
+                <line x1="0" y1="-22" x2="0" y2="-28" stroke="var(--accent-2)" stroke-width="1.5" />
+                <line x1="22" y1="0" x2="28" y2="0" stroke="var(--accent-2)" stroke-width="1.5" />
+                <line x1="0" y1="22" x2="0" y2="28" stroke="var(--accent-2)" stroke-width="1.5" />
+                <line x1="-22" y1="0" x2="-28" y2="0" stroke="var(--accent-2)" stroke-width="1.5" />
               </g>
 
-              <!-- Top-left floating card (Lists/Code) -->
-              <rect x="30" y="35" width="45" height="45" rx="6" fill="url(#grad-teal)" filter="url(#shadow)" />
-              <g transform="translate(52, 57)" stroke="white" stroke-width="2" fill="none">
-                <line x1="-8" y1="-8" x2="8" y2="-8" stroke-linecap="round" />
-                <line x1="-8" y1="-2" x2="8" y2="-2" stroke-linecap="round" />
-                <line x1="-8" y1="4" x2="8" y2="4" stroke-linecap="round" />
+              <!-- Top-left floating card (Lists/Lines) -->
+              <rect x="25" y="30" width="50" height="50" rx="7" fill="url(#grad-blue-site)" filter="url(#shadow)" />
+              <g transform="translate(50, 55)" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round">
+                <line x1="-10" y1="-8" x2="10" y2="-8" />
+                <line x1="-10" y1="-2" x2="10" y2="-2" />
+                <line x1="-10" y1="4" x2="10" y2="4" />
               </g>
 
-              <!-- Top-right floating card (Cloud download) -->
-              <rect x="285" y="50" width="50" height="50" rx="8" fill="url(#grad-blue)" filter="url(#shadow)" />
-              <g transform="translate(310, 75)" stroke="white" stroke-width="2" fill="none">
-                <path d="M -10 0 Q -12 -6 -6 -8 Q 0 -10 4 -8 Q 10 -6 8 0" stroke-linecap="round" stroke-linejoin="round" />
-                <line x1="0" y1="0" x2="0" y2="8" stroke-linecap="round" />
-                <path d="M -4 4 L 0 8 L 4 4" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- Top-right floating card (Download arrow) -->
+              <rect x="285" y="45" width="55" height="55" rx="8" fill="url(#grad-purple-site)" filter="url(#shadow)" />
+              <g transform="translate(312, 72)" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M -10 -2 Q -13 -7 -7 -9 Q 0 -11 5 -9 Q 11 -7 9 -2" />
+                <line x1="0" y1="0" x2="0" y2="9" stroke-linecap="round" />
+                <path d="M -4 5 L 0 9 L 4 5" />
               </g>
 
-              <!-- Left floating card (Settings gear) -->
-              <rect x="20" y="120" width="48" height="48" rx="6" fill="url(#grad-teal)" filter="url(#shadow)" />
-              <g transform="translate(44, 144)" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Left floating card (Settings) -->
+              <rect x="15" y="125" width="50" height="50" rx="7" fill="url(#grad-purple-site)" filter="url(#shadow)" />
+              <g transform="translate(40, 150)" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="0" cy="0" r="6" />
-                <line x1="-10" y1="-2" x2="-6" y2="-2" />
-                <line x1="6" y1="-2" x2="10" y2="-2" />
-                <line x1="-10" y1="2" x2="-6" y2="2" />
-                <line x1="6" y1="2" x2="10" y2="2" />
+                <line x1="-11" y1="-2" x2="-6" y2="-2" />
+                <line x1="6" y1="-2" x2="11" y2="-2" />
+                <line x1="-11" y1="2" x2="-6" y2="2" />
+                <line x1="6" y1="2" x2="11" y2="2" />
               </g>
 
-              <!-- Center Monitor/Device (main focus) -->
-              <rect x="110" y="70" width="140" height="95" rx="8" fill="#1a2847" stroke="#3b82f6" stroke-width="2.5" filter="url(#shadow)" />
-              <rect x="120" y="80" width="120" height="70" rx="4" fill="#0f1729" stroke="#3b82f6" stroke-width="1.5" opacity="0.8" />
+              <!-- Center Desktop/Monitor (main) -->
+              <rect x="105" y="65" width="150" height="100" rx="10" fill="#111827" stroke="var(--accent)" stroke-width="3" filter="url(#shadow)" />
+              <rect x="115" y="78" width="130" height="75" rx="6" fill="#0b0f1a" stroke="var(--accent)" stroke-width="2" opacity="0.9" />
 
-              <!-- Screen content lines -->
-              <g stroke="#3b82f6" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
-                <line x1="130" y1="90" x2="170" y2="90" />
-                <line x1="130" y1="100" x2="225" y2="100" />
-                <line x1="130" y1="108" x2="225" y2="108" />
-                <line x1="130" y1="116" x2="215" y2="116" />
-                <line x1="130" y1="124" x2="225" y2="124" />
-                <line x1="130" y1="132" x2="200" y2="132" />
+              <!-- Screen content with gradients -->
+              <g stroke="var(--accent)" stroke-width="1.5" opacity="0.6" stroke-linecap="round">
+                <line x1="128" y1="88" x2="170" y2="88" />
+                <line x1="128" y1="100" x2="235" y2="100" />
+                <line x1="128" y1="108" x2="235" y2="108" />
+                <line x1="128" y1="116" x2="220" y2="116" />
+                <line x1="128" y1="124" x2="235" y2="124" />
+                <line x1="128" y1="132" x2="205" y2="132" />
               </g>
 
-              <!-- Monitor bezel -->
-              <rect x="110" y="165" width="140" height="6" rx="2" fill="#0f1729" />
-              <circle cx="180" cy="173" r="3" fill="#3b82f6" />
+              <!-- Monitor stand -->
+              <rect x="145" y="170" width="70" height="5" rx="2" fill="#0b0f1a" />
+              <circle cx="180" cy="177" r="3" fill="var(--accent)" />
 
               <!-- Bottom-left card (Code brackets) -->
-              <rect x="50" y="165" width="50" height="50" rx="8" fill="url(#grad-blue)" filter="url(#shadow)" />
-              <g transform="translate(75, 190)" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M -6 -6 L -10 0 L -6 6" />
-                <path d="M 6 -6 L 10 0 L 6 6" />
+              <rect x="40" y="170" width="55" height="55" rx="8" fill="url(#grad-blue-site)" filter="url(#shadow)" />
+              <g transform="translate(67, 197)" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M -8 -8 L -12 0 L -8 8" />
+                <path d="M 8 -8 L 12 0 L 8 8" />
               </g>
 
-              <!-- Bottom-right card (Checkmark) -->
-              <rect x="260" y="165" width="50" height="50" rx="8" fill="url(#grad-purple)" filter="url(#shadow)" />
-              <g transform="translate(285, 190)" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M -6 0 L -2 4 L 6 -4" />
+              <!-- Bottom-right card (Checkmark success) -->
+              <rect x="265" y="170" width="55" height="55" rx="8" fill="url(#grad-purple-site)" filter="url(#shadow)" />
+              <g transform="translate(292, 197)" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M -8 0 L -2 6 L 8 -6" />
               </g>
 
-              <!-- Right side phone/mobile mockup -->
-              <rect x="285" y="135" width="35" height="55" rx="4" fill="#1a2847" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)" />
-              <rect x="288" y="138" width="29" height="42" rx="2" fill="#0f1729" stroke="#7c3aed" stroke-width="1" opacity="0.8" />
-              <circle cx="302.5" cy="180" r="2" fill="#7c3aed" />
+              <!-- Right side phone mockup -->
+              <rect x="280" y="135" width="40" height="60" rx="5" fill="#111827" stroke="var(--accent-2)" stroke-width="2.5" filter="url(#shadow)" />
+              <rect x="284" y="140" width="32" height="45" rx="3" fill="#0b0f1a" stroke="var(--accent-2)" stroke-width="1.5" opacity="0.9" />
+              <circle cx="300" cy="187" r="2.5" fill="var(--accent-2)" />
 
-              <!-- Decorative background elements (very light) -->
-              <g opacity="0.08" stroke="var(--accent-2)" stroke-width="1" fill="none">
-                <circle cx="320" cy="110" r="30" />
-                <circle cx="40" cy="200" r="25" />
+              <!-- Decorative connecting lines -->
+              <g stroke="url(#grad-blue-site)" stroke-width="1" opacity="0.2" stroke-dasharray="3,3">
+                <path d="M 75 80 Q 90 85 105 70" fill="none" />
+                <path d="M 285 100 Q 270 110 255 140" fill="none" />
+              </g>
+
+              <!-- Subtle background circles -->
+              <g opacity="0.06" fill="none" stroke="var(--accent)" stroke-width="1">
+                <circle cx="310" cy="110" r="35" />
+                <circle cx="30" cy="210" r="30" />
               </g>
             </svg>
           </div>
