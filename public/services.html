@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services — DevAuraTech</title>
+    <meta name="description" content="Our services include WordPress development, PHP development, UI/UX design, SEO optimization, speed optimization, and content writing." />
+    <meta name="keywords" content="WordPress services, PHP services, UI/UX design, SEO optimization, website speed, content writing" />
+    <meta name="author" content="DevAuraTech" />
+    <link rel="canonical" href="https://devauratech.com/services.html" />
+    <meta property="og:title" content="Services — DevAuraTech" />
+    <meta property="og:description" content="Our services include WordPress development, PHP development, UI/UX design, SEO optimization, speed optimization, and content writing." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devauratech.com/services.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Services — DevAuraTech" />
+    <meta name="twitter:description" content="Expert web development and digital services from DevAuraTech." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,46 +25,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-    <!-- DataForge Analytics -->
-    <script>
-      (function() {
-        window.dataForge = {
-          projectId: '8fddfcdc-ecd4-44b3-9a9a-739f8ddab9e8',
-          trackingCode: 'ff6be3b3-c6fb-47e2-b830-2e79046ac19b',
-          apiUrl: 'https://29854ad9-e857-4ef0-ba55-f5e18075b587.preview.emergentagent.com/api'
-        };
-        
-        // Generate session ID
-        let sessionId = sessionStorage.getItem('df_session');
-        if (!sessionId) {
-          sessionId = 'sess_' + Math.random().toString(36).substr(2, 9);
-          sessionStorage.setItem('df_session', sessionId);
-        }
-        
-        // Track function
-        window.dataForge.track = function(eventType, eventData) {
-          fetch(window.dataForge.apiUrl + '/track', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              project_id: window.dataForge.projectId,
-              tracking_code: window.dataForge.trackingCode,
-              session_id: sessionId,
-              event_type: eventType,
-              page_url: window.location.href,
-              page_title: document.title,
-              referrer: document.referrer,
-              user_agent: navigator.userAgent,
-              consent_given: true,
-              ...eventData
-            })
-          });
-        };
-        
-        // Auto-track pageview
-        window.dataForge.track('pageview');
-      })();
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DevAuraTech Services",
+      "url": "https://devauratech.com/services.html",
+      "description": "Web development and digital services",
+      "areaServed": "IN"
+    }
     </script>
+    <script src="/analytics.js" defer></script>
   </head>
   <body>
     <div class="bg-surface grid-overlay"></div>
