@@ -86,56 +86,103 @@
           <div class="hero-illustration" aria-hidden="true">
             <svg
               class="ill-dev"
-              viewBox="0 0 360 220"
+              viewBox="0 0 360 240"
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
-                <linearGradient id="grad-workspace" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="var(--accent)" />
-                  <stop offset="100%" stop-color="var(--accent-2)" />
+                <linearGradient id="grad-blue" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#06b6d4" />
+                  <stop offset="100%" stop-color="#0891b2" />
                 </linearGradient>
+                <linearGradient id="grad-purple" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#a78bfa" />
+                  <stop offset="100%" stop-color="#7c3aed" />
+                </linearGradient>
+                <linearGradient id="grad-teal" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#14b8a6" />
+                  <stop offset="100%" stop-color="#0d9488" />
+                </linearGradient>
+                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.3" />
+                </filter>
               </defs>
 
-              <!-- Laptop screen frame -->
-              <rect x="60" y="50" width="200" height="120" rx="8" fill="none" stroke="var(--accent)" stroke-width="2.5" />
-
-              <!-- Screen content area -->
-              <rect x="70" y="60" width="180" height="95" rx="4" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5" />
-
-              <!-- Laptop base/stand -->
-              <line x1="70" y1="170" x2="290" y2="170" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" />
-              <path d="M 140 170 L 120 190 M 220 170 L 240 190" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" />
-
-              <!-- WordPress icon (top left) -->
-              <g transform="translate(120, 70)">
-                <circle cx="0" cy="0" r="14" fill="none" stroke="var(--accent)" stroke-width="2" />
-                <path d="M -9 -2 Q 0 4 9 -2 M -9 2 Q 0 8 9 2" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" />
+              <!-- Decorative gear (top right, light) -->
+              <g opacity="0.15" transform="translate(280, 30)">
+                <circle cx="0" cy="0" r="20" fill="none" stroke="var(--accent-2)" stroke-width="1" />
+                <circle cx="0" cy="0" r="12" fill="none" stroke="var(--accent-2)" stroke-width="1" />
+                <line x1="0" y1="-20" x2="0" y2="-25" stroke="var(--accent-2)" stroke-width="1" />
+                <line x1="20" y1="0" x2="25" y2="0" stroke="var(--accent-2)" stroke-width="1" />
+                <line x1="0" y1="20" x2="0" y2="25" stroke="var(--accent-2)" stroke-width="1" />
+                <line x1="-20" y1="0" x2="-25" y2="0" stroke="var(--accent-2)" stroke-width="1" />
               </g>
 
-              <!-- PHP icon (top right) -->
-              <g transform="translate(240, 70)">
-                <circle cx="0" cy="0" r="14" fill="none" stroke="var(--accent-2)" stroke-width="2" />
-                <text x="0" y="4" font-size="14" font-weight="bold" text-anchor="middle" fill="var(--accent-2)" font-family="monospace">P</text>
+              <!-- Top-left floating card (Lists/Code) -->
+              <rect x="30" y="35" width="45" height="45" rx="6" fill="url(#grad-teal)" filter="url(#shadow)" />
+              <g transform="translate(52, 57)" stroke="white" stroke-width="2" fill="none">
+                <line x1="-8" y1="-8" x2="8" y2="-8" stroke-linecap="round" />
+                <line x1="-8" y1="-2" x2="8" y2="-2" stroke-linecap="round" />
+                <line x1="-8" y1="4" x2="8" y2="4" stroke-linecap="round" />
               </g>
 
-              <!-- SMS/Message bubble (bottom left) -->
-              <g transform="translate(120, 130)">
-                <path d="M -12 -8 L 12 -8 L 14 6 L 10 0 L 12 10 L -12 10 Q -14 6 -14 0 Q -14 -4 -12 -8" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" />
-                <line x1="-8" y1="-3" x2="8" y2="-3" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" />
-                <line x1="-8" y1="2" x2="8" y2="2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" />
+              <!-- Top-right floating card (Cloud download) -->
+              <rect x="285" y="50" width="50" height="50" rx="8" fill="url(#grad-blue)" filter="url(#shadow)" />
+              <g transform="translate(310, 75)" stroke="white" stroke-width="2" fill="none">
+                <path d="M -10 0 Q -12 -6 -6 -8 Q 0 -10 4 -8 Q 10 -6 8 0" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="0" y1="0" x2="0" y2="8" stroke-linecap="round" />
+                <path d="M -4 4 L 0 8 L 4 4" stroke-linecap="round" stroke-linejoin="round" />
               </g>
 
-              <!-- SEO Growth arrow (bottom right) -->
-              <g transform="translate(240, 130)">
-                <path d="M -10 8 L 0 -4 L 10 8" fill="none" stroke="var(--accent-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M 8 6 L 8 -2" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" />
-                <path d="M -2 6 L -2 2" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" />
+              <!-- Left floating card (Settings gear) -->
+              <rect x="20" y="120" width="48" height="48" rx="6" fill="url(#grad-teal)" filter="url(#shadow)" />
+              <g transform="translate(44, 144)" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="0" cy="0" r="6" />
+                <line x1="-10" y1="-2" x2="-6" y2="-2" />
+                <line x1="6" y1="-2" x2="10" y2="-2" />
+                <line x1="-10" y1="2" x2="-6" y2="2" />
+                <line x1="6" y1="2" x2="10" y2="2" />
               </g>
 
-              <!-- Connecting lines -->
-              <g stroke="url(#grad-workspace)" stroke-width="1.5" opacity="0.3">
-                <path d="M 130 85 Q 160 100 120 130" fill="none" />
-                <path d="M 230 85 Q 200 100 240 130" fill="none" />
+              <!-- Center Monitor/Device (main focus) -->
+              <rect x="110" y="70" width="140" height="95" rx="8" fill="#1a2847" stroke="#3b82f6" stroke-width="2.5" filter="url(#shadow)" />
+              <rect x="120" y="80" width="120" height="70" rx="4" fill="#0f1729" stroke="#3b82f6" stroke-width="1.5" opacity="0.8" />
+
+              <!-- Screen content lines -->
+              <g stroke="#3b82f6" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
+                <line x1="130" y1="90" x2="170" y2="90" />
+                <line x1="130" y1="100" x2="225" y2="100" />
+                <line x1="130" y1="108" x2="225" y2="108" />
+                <line x1="130" y1="116" x2="215" y2="116" />
+                <line x1="130" y1="124" x2="225" y2="124" />
+                <line x1="130" y1="132" x2="200" y2="132" />
+              </g>
+
+              <!-- Monitor bezel -->
+              <rect x="110" y="165" width="140" height="6" rx="2" fill="#0f1729" />
+              <circle cx="180" cy="173" r="3" fill="#3b82f6" />
+
+              <!-- Bottom-left card (Code brackets) -->
+              <rect x="50" y="165" width="50" height="50" rx="8" fill="url(#grad-blue)" filter="url(#shadow)" />
+              <g transform="translate(75, 190)" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M -6 -6 L -10 0 L -6 6" />
+                <path d="M 6 -6 L 10 0 L 6 6" />
+              </g>
+
+              <!-- Bottom-right card (Checkmark) -->
+              <rect x="260" y="165" width="50" height="50" rx="8" fill="url(#grad-purple)" filter="url(#shadow)" />
+              <g transform="translate(285, 190)" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M -6 0 L -2 4 L 6 -4" />
+              </g>
+
+              <!-- Right side phone/mobile mockup -->
+              <rect x="285" y="135" width="35" height="55" rx="4" fill="#1a2847" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)" />
+              <rect x="288" y="138" width="29" height="42" rx="2" fill="#0f1729" stroke="#7c3aed" stroke-width="1" opacity="0.8" />
+              <circle cx="302.5" cy="180" r="2" fill="#7c3aed" />
+
+              <!-- Decorative background elements (very light) -->
+              <g opacity="0.08" stroke="var(--accent-2)" stroke-width="1" fill="none">
+                <circle cx="320" cy="110" r="30" />
+                <circle cx="40" cy="200" r="25" />
               </g>
             </svg>
           </div>
