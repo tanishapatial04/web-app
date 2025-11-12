@@ -96,62 +96,46 @@
                 </linearGradient>
               </defs>
 
-              <!-- Laptop desk -->
-              <g opacity="0.6">
-                <rect x="40" y="110" width="160" height="80" rx="6" fill="none" stroke="var(--accent)" stroke-width="2" />
-                <rect x="50" y="115" width="140" height="50" rx="4" fill="none" stroke="var(--accent)" stroke-width="2" />
-                <line x1="45" y1="190" x2="195" y2="190" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" />
+              <!-- Laptop screen frame -->
+              <rect x="60" y="50" width="200" height="120" rx="8" fill="none" stroke="var(--accent)" stroke-width="2.5" />
+
+              <!-- Screen content area -->
+              <rect x="70" y="60" width="180" height="95" rx="4" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5" />
+
+              <!-- Laptop base/stand -->
+              <line x1="70" y1="170" x2="290" y2="170" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M 140 170 L 120 190 M 220 170 L 240 190" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" />
+
+              <!-- WordPress icon (top left) -->
+              <g transform="translate(120, 70)">
+                <circle cx="0" cy="0" r="14" fill="none" stroke="var(--accent)" stroke-width="2" />
+                <path d="M -9 -2 Q 0 4 9 -2 M -9 2 Q 0 8 9 2" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" />
               </g>
 
-              <!-- Person silhouette -->
-              <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="80" cy="65" r="10" />
-                <path d="M 80 75 L 80 95" />
-                <path d="M 70 85 L 90 85" />
-                <path d="M 75 95 L 70 115" />
-                <path d="M 85 95 L 90 115" />
+              <!-- PHP icon (top right) -->
+              <g transform="translate(240, 70)">
+                <circle cx="0" cy="0" r="14" fill="none" stroke="var(--accent-2)" stroke-width="2" />
+                <text x="0" y="4" font-size="14" font-weight="bold" text-anchor="middle" fill="var(--accent-2)" font-family="monospace">P</text>
               </g>
 
-              <!-- Keyboard indicator -->
-              <g stroke="var(--accent-2)" stroke-width="1.5" fill="none">
-                <rect x="60" y="158" width="60" height="8" rx="1" />
-                <line x1="65" y1="158" x2="65" y2="166" />
-                <line x1="75" y1="158" x2="75" y2="166" />
-                <line x1="85" y1="158" x2="85" y2="166" />
-                <line x1="105" y1="158" x2="105" y2="166" />
+              <!-- SMS/Message bubble (bottom left) -->
+              <g transform="translate(120, 130)">
+                <path d="M -12 -8 L 12 -8 L 14 6 L 10 0 L 12 10 L -12 10 Q -14 6 -14 0 Q -14 -4 -12 -8" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" />
+                <line x1="-8" y1="-3" x2="8" y2="-3" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="-8" y1="2" x2="8" y2="2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" />
               </g>
 
-              <!-- WordPress icon -->
-              <g transform="translate(220, 40)">
-                <circle cx="0" cy="0" r="12" fill="none" stroke="var(--accent)" stroke-width="1.5" />
-                <path d="M -8 -3 Q 0 3 8 -3 M -8 0 Q 0 6 8 0 M -8 3 Q 0 9 8 3" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" />
+              <!-- SEO Growth arrow (bottom right) -->
+              <g transform="translate(240, 130)">
+                <path d="M -10 8 L 0 -4 L 10 8" fill="none" stroke="var(--accent-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M 8 6 L 8 -2" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" />
+                <path d="M -2 6 L -2 2" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" />
               </g>
 
-              <!-- PHP icon -->
-              <g transform="translate(280, 40)">
-                <path d="M -6 -8 L 6 -8 L 3 0 L 8 8 L 0 8 L -4 0 L -6 8 L -12 8 L -8 0 L -12 -8 L -6 -8" fill="none" stroke="var(--accent-2)" stroke-width="1.5" stroke-linejoin="round" />
-              </g>
-
-              <!-- SMS/Message bubble -->
-              <g transform="translate(240, 100)">
-                <path d="M -10 -8 L 10 -8 L 12 4 L 8 0 L 10 8 L -10 8 Q -12 4 -12 0 Q -12 -4 -10 -8" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round" />
-                <line x1="-6" y1="-4" x2="6" y2="-4" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" />
-                <line x1="-6" y1="0" x2="6" y2="0" stroke="var(--accent)" stroke-width="1" stroke-linecap="round" />
-              </g>
-
-              <!-- SEO Growth arrow -->
-              <g transform="translate(310, 100)">
-                <path d="M -8 6 L 0 -2 L 8 6" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M 6 4 L 6 -4" fill="none" stroke="var(--accent-2)" stroke-width="1.5" stroke-linecap="round" />
-                <path d="M -2 4 L -2 0" fill="none" stroke="var(--accent-2)" stroke-width="1.5" stroke-linecap="round" />
-              </g>
-
-              <!-- Decorative connection lines -->
-              <g stroke="url(#grad-workspace)" stroke-width="1" opacity="0.4">
-                <line x1="232" y1="52" x2="220" y2="90" />
-                <line x1="292" y1="52" x2="280" y2="90" />
-                <line x1="240" y1="92" x2="200" y2="130" />
-                <line x1="310" y1="92" x2="220" y2="130" />
+              <!-- Connecting lines -->
+              <g stroke="url(#grad-workspace)" stroke-width="1.5" opacity="0.3">
+                <path d="M 130 85 Q 160 100 120 130" fill="none" />
+                <path d="M 230 85 Q 200 100 240 130" fill="none" />
               </g>
             </svg>
           </div>
