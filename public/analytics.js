@@ -1,8 +1,8 @@
 (function () {
-  window.dataForge = {
-    projectId: "b19ba5e1-91d6-41a6-a014-6bce94349993",
-    trackingCode: "6b3dbcc9-c480-4f9e-ba54-48070aac2206",
-    apiUrl: "http://localhost:8000/api",
+  window.Intellica = {
+    projectId: "a349e947-664e-45b6-a49d-bd76784cc3d7",
+    trackingCode: "398fd303-d5ef-4523-89ce-9084f7c02833",
+    apiUrl: "https://custom-analytics-software.onrender.com/api",
   };
 
   // Generate session ID
@@ -13,13 +13,13 @@
   }
 
   // Track function
-  window.dataForge.track = function (eventType, eventData) {
-    fetch(window.dataForge.apiUrl + "/track", {
+  window.Intellica.track = function (eventType, eventData) {
+    fetch(window.Intellica.apiUrl + "/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        project_id: window.dataForge.projectId,
-        tracking_code: window.dataForge.trackingCode,
+        project_id: window.Intellica.projectId,
+        tracking_code: window.Intellica.trackingCode,
         session_id: sessionId,
         event_type: eventType,
         page_url: window.location.href,
@@ -33,5 +33,5 @@
   };
 
   // Auto-track pageview
-  window.dataForge.track("pageview");
+  window.Intellica.track("pageview");
 })();
