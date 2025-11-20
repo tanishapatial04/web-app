@@ -1,5 +1,5 @@
 (function () {
-  window.Intellica = {
+  window.SignalVista = {
     projectId: "a349e947-664e-45b6-a49d-bd76784cc3d7",
     trackingCode: "398fd303-d5ef-4523-89ce-9084f7c02833",
     apiUrl: "https://custom-analytics-software.onrender.com/api",
@@ -13,13 +13,13 @@
   }
 
   // Track function
-  window.Intellica.track = function (eventType, eventData) {
-    fetch(window.Intellica.apiUrl + "/track", {
+  window.SignalVista.track = function (eventType, eventData) {
+    fetch(window.SignalVista.apiUrl + "/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        project_id: window.Intellica.projectId,
-        tracking_code: window.Intellica.trackingCode,
+        project_id: window.SignalVista.projectId,
+        tracking_code: window.SignalVista.trackingCode,
         session_id: sessionId,
         event_type: eventType,
         page_url: window.location.href,
@@ -33,5 +33,5 @@
   };
 
   // Auto-track pageview
-  window.Intellica.track("pageview");
+  window.SignalVista.track("pageview");
 })();
