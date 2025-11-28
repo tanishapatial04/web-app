@@ -5,9 +5,24 @@
   sessionStorage.setItem('atlas_sid', sessionId);
   
   function track() {
+    // Allow the site to provide the Supabase key via a global var or a meta tag.
+    var supabaseKey = window.ATLAS_SUPABASE_KEY || (function() {
+      var m = document.querySelector('meta[name="supabase-key"]');
+      return m ? m.content : null;
+    })();
+
+    var headers = { 'Content-Type': 'application/json' };
+    if (supabaseKey) {
+      // Supabase convention: send both Authorization and apikey headers
+      headers['Authorization'] = 'Bearer ' + supabaseKey;
+      headers['apikey'] = supabaseKey;
+    } else {
+      console.warn('Atlas: no Supabase key provided. Set window.ATLAS_SUPABASE_KEY or a meta[name="supabase-key"] to avoid 401 errors.');
+    }
+
     fetch(apiUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: headers,
       body: JSON.stringify({
         tracking_id: trackingId,
         session_id: sessionId,
