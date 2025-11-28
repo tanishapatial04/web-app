@@ -23,6 +23,13 @@ const MIME_TYPES = {
   '.ttf': 'font/ttf'
 };
 
+// CORS headers to allow requests from any origin (used for the /track proxy)
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+};
+
 function sanitize(filePath) {
   const resolved = path.normalize(filePath).replace(/^\/+/, '');
   if (resolved.includes('..')) return 'index.html';
@@ -51,11 +58,16 @@ const server = http.createServer((req, res) => {
 
   // Proxy endpoint for tracking to keep Supabase key server-side
   if (pathname === '/track' && req.method === 'POST') {
+    // Handle preflight OPTIONS requests for CORS
+    if (req.method === 'OPTIONS') {
+      res.writeHead(204, corsHeaders);
+      return res.end();
+    }
     // Ensure we have a Supabase function URL and key in env
     const SUPABASE_FUNCTION_URL = process.env.SUPABASE_FUNCTION_URL || 'https://rcyktxwlfrlhxgsxxahr.supabase.co/functions/v1/track';
     const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_KEY;
     if (!SUPABASE_KEY) {
-      res.writeHead(500, { 'Content-Type': 'application/json; charset=UTF-8' });
+      res.writeHead(500, Object.assign({}, corsHeaders, { 'Content-Type': 'application/json; charset=UTF-8' }));
       return res.end(JSON.stringify({ error: 'Supabase key not configured on server' }));
     }
 
@@ -79,18 +91,19 @@ const server = http.createServer((req, res) => {
         }
       };
 
-      const proxyReq = https.request(options, proxyRes => {
+      const proxyRes = https.request(options, proxyRes => {
         let respBody = '';
         proxyRes.on('data', d => { respBody += d; });
         proxyRes.on('end', () => {
-          // Mirror status and headers (simplified)
-          res.writeHead(proxyRes.statusCode || 200, { 'Content-Type': proxyRes.headers['content-type'] || 'application/json' });
+          // Mirror status and headers (simplified) and include CORS headers
+          const outHeaders = Object.assign({}, corsHeaders, { 'Content-Type': proxyRes.headers['content-type'] || 'application/json' });
+          res.writeHead(proxyRes.statusCode || 200, outHeaders);
           res.end(respBody);
         });
       });
 
       proxyReq.on('error', err => {
-        res.writeHead(502, { 'Content-Type': 'application/json; charset=UTF-8' });
+        res.writeHead(502, Object.assign({}, corsHeaders, { 'Content-Type': 'application/json; charset=UTF-8' }));
         res.end(JSON.stringify({ error: 'Proxy request failed', details: err.message }));
       });
 
