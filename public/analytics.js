@@ -1,37 +1,26 @@
-(function () {
-  window.SignalVista = {
-    projectId: "a349e947-664e-45b6-a49d-bd76784cc3d7",
-    trackingCode: "398fd303-d5ef-4523-89ce-9084f7c02833",
-    apiUrl: "https://custom-analytics-software.onrender.com/api",
-  };
-
-  // Generate session ID
-  let sessionId = sessionStorage.getItem("df_session");
-  if (!sessionId) {
-    sessionId = "sess_" + Math.random().toString(36).substr(2, 9);
-    sessionStorage.setItem("df_session", sessionId);
-  }
-
-  // Track function
-  window.SignalVista.track = function (eventType, eventData) {
-    fetch(window.SignalVista.apiUrl + "/track", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+(function() {
+  var trackingId = 'bc1cbd6a8225e0ba2a857593b51ad46c';
+  var apiUrl = 'https://rcyktxwlfrlhxgsxxahr.supabase.co/functions/v1/track';
+  var sessionId = sessionStorage.getItem('atlas_sid') || Math.random().toString(36).substring(2);
+  sessionStorage.setItem('atlas_sid', sessionId);
+  
+  function track() {
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        project_id: window.SignalVista.projectId,
-        tracking_code: window.SignalVista.trackingCode,
+        tracking_id: trackingId,
         session_id: sessionId,
-        event_type: eventType,
         page_url: window.location.href,
         page_title: document.title,
         referrer: document.referrer,
         user_agent: navigator.userAgent,
-        consent_given: true,
-        ...eventData,
-      }),
-    });
-  };
-
-  // Auto-track pageview
-  window.SignalVista.track("pageview");
+        screen_width: window.screen.width,
+        screen_height: window.screen.height
+      })
+    }).catch(function(e) { console.error('Atlas tracking error:', e); });
+  }
+  
+  track();
+  window.addEventListener('popstate', track);
 })();
