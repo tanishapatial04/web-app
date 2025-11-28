@@ -1,5 +1,5 @@
 (function() {
-  var trackingId = 'bc1cbd6a8225e0ba2a857593b51ad46c';
+  var trackingId = '62313c98e70d38f002d144092a5f09f3';
   var apiUrl = 'https://rcyktxwlfrlhxgsxxahr.supabase.co/functions/v1/track';
   var sessionId = sessionStorage.getItem('atlas_sid') || Math.random().toString(36).substring(2);
   sessionStorage.setItem('atlas_sid', sessionId);
