@@ -80,6 +80,40 @@ button, input, textarea, select { font-family: inherit; }
 .work-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; position: relative; transition: all .3s cubic-bezier(0.23, 1, 0.320, 1); }
 /* .work-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, var(--border)) inset, 0 12px 32px rgba(59,130,246,.18); border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); } */
 .work-media { height: 240px; border-bottom: 1px solid var(--border); }
+.work-media .preview-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 0.75em 2em;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
+  z-index: 2;
+  display: none;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.work-media:hover .preview-btn {
+  display: block;
+}
+.work-media::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+.work-media:hover::after {
+  opacity: 1;
+}
 .gradient-media { background-size: 200% 200%; animation: shift 6s ease-in-out infinite; }
 .gradient-blue { background-image: linear-gradient(135deg, rgba(59,130,246,.2), rgba(167,139,250,.2)); }
 .gradient-purple { background-image: linear-gradient(135deg, rgba(167,139,250,.25), rgba(59,130,246,.1)); }
