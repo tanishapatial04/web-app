@@ -56,17 +56,15 @@
           <button class="filter-btn" data-filter="content">Content</button>
         </div> -->
         <div class="work-grid portfolio-grid" id="portfolioGrid">
-          <article class="work-card reveal" data-cat="wordpress">
+          <article class="work-card" data-cat="wordpress">
             <div class="work-media gradient-media gradient-blue">
-              <img src="/assets/media/helium-web-solutions.png" alt="Helium Web Solutions Graphic"/>
-              <div class="work-overlay">
-                <a class="preview-btn" href="https://heliumwebsolutions.com/" target="_blank" rel="noopener">Preview</a>
+                <img src="/assets/media/helium-web-solutions.png" alt="Helium Web Solutions Graphic"/>
+                <a class="preview-btn" href="https://heliumwebsolutions.com/" target="_blank" rel="noopener" style="display:none;">Preview</a>
+            </div>
+              <div class="work-meta"><h3 class="work-title">IT Agency Site</h3><p class="work-text">WordPress + Elementor Magic</p>
               </div>
-            </div>
-            <div class="work-meta"><h3 class="work-title">IT Agency Site</h3><p class="work-text">WordPress + Elementor Magic</p>
-            </div>
           </article>
-          <article class="work-card reveal" data-cat="php">
+          <article class="work-card" data-cat="php">
             <div class="work-media gradient-media gradient-purple">
                <img src="/assets/media/naushadparpia-domain-migration.png" alt="Domain & Site Migration Graphic"/>
             </div>
@@ -75,7 +73,7 @@
                 <p class="work-text">Server Transfer + DNS Setup</p>
               </div>
           </article>
-          <article class="work-card reveal" data-cat="seo">
+          <article class="work-card" data-cat="seo">
             <div class="work-media gradient-media gradient-mixed">
               <img src="/assets/media/ai-content-automation.png" alt="AI Content Automation Graphic"/>
             </div>
@@ -84,65 +82,54 @@
                 <p class="work-text">Custom WP Plugin + API Integration</p>
               </div>
           </article>
-          <article class="work-card reveal" data-cat="content">
+          <article class="work-card" data-cat="content">
             <div class="work-media gradient-media gradient-blue">
               <img src="/assets/media/content-creation.png" alt="Content Creation Graphic"/>
-              <div class="work-overlay">
-                <a class="preview-btn" href="https://heliumwebsolutions.com/" target="_blank" rel="noopener">Preview</a>
-              </div>
+              <a class="preview-btn" href="https://heliumwebsolutions.com/" target="_blank" rel="noopener" style="display:none;">Preview</a>
             </div>
             <div class="work-meta">
               <h3 class="work-title">Content Writing</h3>
               <p class="work-text">Blogs, Web Copy, SEO Content</p>
             </div>
           </article>
-          <article class="work-card reveal" data-cat="wordpress">
+          <article class="work-card" data-cat="wordpress">
             <div class="work-media gradient-media gradient-blue">
               <img src="/assets/media/kushaya-creatives.png" alt="Kushaya Creatives Graphic"/>
-              <div class="work-overlay">
-                <a class="preview-btn" href="https://kushayacreatives.com/" target="_blank" rel="noopener">Preview</a>
-              </div>
+              <a class="preview-btn" href="https://kushayacreatives.com/" target="_blank" rel="noopener" style="display:none;">Preview</a>
             </div>
             <div class="work-meta">
               <h3 class="work-title">Kushaya Creatives</h3>
               <p class="work-text">WordPress + Branding</p>
             </div>
           </article>
-          <article class="work-card reveal" data-cat="wordpress">
+          <article class="work-card" data-cat="wordpress">
             <div class="work-media gradient-media gradient-blue">
               <img src="/assets/media/kf-management.png" alt="KF Management Consultancies Graphic"/>
-              <div class="work-overlay">
-                <a class="preview-btn" href="https://kfmanagementconsultancies.com/" target="_blank" rel="noopener">Preview</a>
-              </div>
+              <a class="preview-btn" href="https://kfmanagementconsultancies.com/" target="_blank" rel="noopener" style="display:none;">Preview</a>
             </div>
             <div class="work-meta">
               <h3 class="work-title">KF Management Consultancies</h3>
               <p class="work-text">WordPress + Consulting</p>
             </div>
           </article>
-          <article class="work-card reveal" data-cat="wordpress">
+          <article class="work-card" data-cat="wordpress">
             <div class="work-media gradient-media gradient-blue">
               <img src="/assets/media/glorious-dxb.png" alt="Glorious DXB Graphic"/>
-              <div class="work-overlay">
-                <a class="preview-btn" href="https://gloriousdxb.com/" target="_blank" rel="noopener">Preview</a>
-              </div>
+              <a class="preview-btn" href="https://gloriousdxb.com/" target="_blank" rel="noopener" style="display:none;">Preview</a>
             </div>
             <div class="work-meta">
               <h3 class="work-title">Glorious DXB</h3>
               <p class="work-text">WordPress + E-commerce</p>
             </div>
           </article>
-          <article class="work-card reveal" data-cat="wordpress">
+          <article class="work-card" data-cat="wordpress">
             <div class="work-media gradient-media gradient-blue">
               <img src="/assets/media/cavana-fashion.png" alt="Cavana Fashion Graphic"/>
-              <div class="work-overlay">
-                <a class="preview-btn" href="https://cavanafashion.com/" target="_blank" rel="noopener">Preview</a>
-                <span class="site-type">Shopify</span>
-              </div>
+              <a class="preview-btn" href="https://cavanafashion.com/" target="_blank" rel="noopener" style="display:none;">Preview</a>
             </div>
             <div class="work-meta">
               <h3 class="work-title">Cavana Fashion</h3>
-              <p class="work-text">Shopify + Fashion</p>
+              <p class="work-text">WordPress + Fashion</p>
             </div>
           </article>
         </div>
@@ -158,7 +145,22 @@
     </main>
 
     <div data-include="footer"></div>
-    <!-- Scroll animation handled in app.js -->
+    <script>
+      // Portfolio preview button hover logic
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.work-card').forEach(function(card) {
+          var previewBtn = card.querySelector('.preview-btn');
+          if (previewBtn) {
+            card.addEventListener('mouseenter', function() {
+              previewBtn.style.display = 'block';
+            });
+            card.addEventListener('mouseleave', function() {
+              previewBtn.style.display = 'none';
+            });
+          }
+        });
+      });
+    </script>
     <script src="app.js" defer></script>
   </body>
 </html>
