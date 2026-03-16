@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /partials/
 
-Sitemap: https://devauratech.com/sitemap.xml
+Sitemap: https://highvibetech.com/sitemap.xml
