@@ -78,6 +78,7 @@ button, input, textarea, select { font-family: inherit; }
 /* Work */
 .work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 /* Portfolio preview button */
+/* Portfolio preview button (floating style for all except Cavana) */
 .preview-btn {
   position: absolute;
   left: 50%;
@@ -93,12 +94,52 @@ button, input, textarea, select { font-family: inherit; }
   opacity: 0;
   pointer-events: none;
   z-index: 2;
+  font-size: 1rem;
+  text-decoration: none;
   transition: opacity .3s cubic-bezier(0.23, 1, 0.320, 1), transform .3s cubic-bezier(0.23, 1, 0.320, 1);
 }
 .work-card:hover .preview-btn {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1.05);
+}
+/* Cavana overlay style */
+.work-media { position: relative; }
+/* Overlay for all portfolio cards with links */
+.work-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(59,130,246,0.18), rgba(17,24,39,0.65) 80%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 3;
+}
+.work-card:hover .work-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.work-overlay .preview-btn {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+  margin-bottom: 10px;
+  transform: none;
+}
+.site-type {
+  display: inline-block;
+  background: rgba(59,130,246,0.15);
+  color: #fff;
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 8px;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
 }
 .work-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; position: relative; transition: all .3s cubic-bezier(0.23, 1, 0.320, 1); box-shadow: 0 2px 16px rgba(59,130,246,0.08); }
 .work-card.reveal { opacity: 0; transform: translateY(40px) scale(0.98); transition: opacity .7s cubic-bezier(0.23, 1, 0.320, 1), transform .7s cubic-bezier(0.23, 1, 0.320, 1); }
