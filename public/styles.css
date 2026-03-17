@@ -54,7 +54,24 @@ button, input, textarea, select { font-family: inherit; }
 .hero-section.reveal.is-visible .hero-actions .button { animation: fade-scale-in .8s cubic-bezier(0.23, 1, 0.320, 1) .2s forwards; }
 @keyframes fade-slide-in-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 @keyframes fade-scale-in { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-.hero-visual { position: relative; min-height: 280px; display: grid; place-items: center; }
+.hero-visual { position: relative; min-height: 280px; display: grid; place-items: center;    animation: float 6s ease-in-out infinite; }
+.hero-image { width: 60%; animation: floatRotateSmooth 27s linear infinite; }
+@keyframes floatRotateSmooth { 0% { transform: translateY(0px) rotate(0deg);}50% { transform: translateY(-15px) rotate(180deg);} 100% {
+      transform: translateY(0px) rotate(360deg);
+    }
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 .glow-orb { position: absolute; filter: blur(40px); opacity: .5; border-radius: 50%; }
 .orb-blue { width: 220px; height: 220px; background: var(--accent); top: 10%; left: 10%; }
 .orb-purple { width: 260px; height: 260px; background: var(--accent-2); bottom: 0; right: 10%; }
