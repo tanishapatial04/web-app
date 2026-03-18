@@ -1,6 +1,11 @@
 {
   "rewrites": [
     { "source": "/blog/:slug", "destination": "/blog-single.html" },
-    { "source": "/app.js", "destination": "/app.js" }
+    { "source": "/app.js", "destination": "/app.js" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/blog", "destination": "/blog.html" }
   ]
 }
