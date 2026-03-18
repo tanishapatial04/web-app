@@ -119,6 +119,15 @@ const server = http.createServer((req, res) => {
     if (fs.existsSync(blogPage)) return sendFile(res, blogPage);
   }
   
+  // Handle clean URLs: if no extension, try adding .html
+  if (!path.extname(pathname) && pathname !== '/') {
+    const htmlPath = pathname + '.html';
+    const fullHtmlPath = path.join(PUBLIC_DIR, htmlPath);
+    if (fs.existsSync(fullHtmlPath)) {
+      return sendFile(res, fullHtmlPath);
+    }
+  }
+  
   if (pathname === '/') pathname = '/index.html';
 
   const safePath = sanitize(pathname);
