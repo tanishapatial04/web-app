@@ -80,8 +80,26 @@ button, input, textarea, select { font-family: inherit; }
 
 /* Sections */
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.section-title { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: .2px;margin-bottom: 10px;}
+.section-title { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: .2px;margin-bottom: 10px; }
 .section-desc { margin: 0; }
+
+/* Rotating text helper */
+.text-rotate { display: inline-flex; align-items: center; overflow: hidden; }
+.text-rotate span { display: inline-block; transform: translateY(120%); opacity: 0; }
+.text-rotate span.is-active { animation: rotate-slide-in 0.6s ease forwards; }
+.text-rotate span.is-exit { animation: rotate-slide-out 0.35s ease forwards; }
+
+@keyframes rotate-slide-in {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rotate-slide-out {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-120%); opacity: 0; }
+}
+
+.heading-label { margin-right: .35rem; }
 
 /* Cards */
 .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }

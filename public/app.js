@@ -172,6 +172,52 @@
     start();
   }
 
+  function initRotatingHeading() {
+    const target = document.getElementById("rotating-testimonials-tag");
+    if (!target) return;
+
+    const texts = ["React", "Bits", "Is", "Cool!"];
+    const interval = 2000;
+    const transitionDuration = 250;
+    let current = 0;
+    let isAnimating = false;
+
+    function showText(index) {
+      if (!target) return;
+      const nextText = texts[index % texts.length];
+      const currentSpan = target.querySelector("span");
+
+      if (currentSpan) {
+        currentSpan.classList.remove("is-active");
+        currentSpan.classList.add("is-exit");
+        setTimeout(() => {
+          if (target.contains(currentSpan)) target.removeChild(currentSpan);
+
+          const newSpan = document.createElement("span");
+          newSpan.textContent = nextText;
+          newSpan.classList.add("is-active");
+          target.appendChild(newSpan);
+        }, transitionDuration);
+      } else {
+        const newSpan = document.createElement("span");
+        newSpan.textContent = nextText;
+        newSpan.classList.add("is-active");
+        target.appendChild(newSpan);
+      }
+    }
+
+    showText(current);
+    setInterval(() => {
+      if (isAnimating) return;
+      isAnimating = true;
+      current = (current + 1) % texts.length;
+      showText(current);
+      setTimeout(() => {
+        isAnimating = false;
+      }, transitionDuration + 40);
+    }, interval);
+  }
+
   function initPortfolioFilters() {
     const grid = document.getElementById("portfolioGrid");
     if (!grid) return;
@@ -214,6 +260,7 @@
     initSlider();
     initPortfolioFilters();
     initBlogFilters();
+    initRotatingHeading();
     initMobileMenu();
   });
 })();
