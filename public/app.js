@@ -7,15 +7,8 @@
         fetch("/partials/header.html")
           .then((r) => r.text())
           .then((html) => {
-            try {
-              if (slot && slot.parentNode) {
-                slot.outerHTML = html;
-              }
-            } catch (e) {
-              console.warn('Error setting header outerHTML:', e);
-            }
+            slot.outerHTML = html;
           })
-          .catch(e => console.warn('Error fetching header:', e))
       );
     });
     document.querySelectorAll('[data-include="footer"]').forEach((slot) => {
@@ -23,15 +16,8 @@
         fetch("/partials/footer.html")
           .then((r) => r.text())
           .then((html) => {
-            try {
-              if (slot && slot.parentNode) {
-                slot.outerHTML = html;
-              }
-            } catch (e) {
-              console.warn('Error setting footer outerHTML:', e);
-            }
+            slot.outerHTML = html;
           })
-          .catch(e => console.warn('Error fetching footer:', e))
       );
     });
     await Promise.all(tasks);
@@ -232,13 +218,6 @@
     }, interval);
   }
 
-  function initHyperspeedBackground() {
-    // Wait for DOM to be fully ready and Three.js to be available
-    if (window.initHyperspeedBackground && typeof window.initHyperspeedBackground === 'function') {
-      window.initHyperspeedBackground('hyperspeed-container');
-    }
-  }
-
   function initPortfolioFilters() {
     const grid = document.getElementById("portfolioGrid");
     if (!grid) return;
@@ -278,7 +257,6 @@
     initClock();
     initReveal();
     initHeroTilt();
-    initHyperspeedBackground();
     initSlider();
     initPortfolioFilters();
     initBlogFilters();

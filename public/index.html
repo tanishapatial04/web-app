@@ -32,16 +32,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-    <script src="https://cdn.jsdelivr.net/npm/three@r128/build/three.min.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      // Initialize EmailJS when available
-      window.addEventListener('DOMContentLoaded', function() {
-        if (typeof emailjs !== 'undefined') {
-          emailjs.init('YOUR_PUBLIC_KEY');
-        }
-      });
-    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,8 +55,6 @@
     }
     </script>
     <script src="/analytics.js" defer></script>
-    <script src="/hyperspeed-bg.js"></script>
-    <script src="/app.js" defer></script>
   </head>
   <body>
     <div class="bg-surface grid-overlay"></div>
@@ -79,21 +67,24 @@
         class="hero-section container reveal"
         aria-labelledby="hero-title"
       >
-        <div id="hyperspeed-container" class="hyperspeed-bg"></div>
-        <div class="hero-content">
-          <div class="hero-body">
-            <h1 id="hero-title" class="hero-title">
-              Empowering Businesses with WordPress, PHP & Digital Growth
-            </h1>
-            <p class="hero-subtitle">
-              We craft WordPress and PHP solutions, boost SEO, optimize
-              performance, and create content that ranks.
-            </p>
-            <div class="hero-actions">
-              <a class="button neon-cta" href="services.html">Explore services</a>
-              <a class="button ghost-btn" href="portfolio.html">See our work</a>
-            </div>
+        <div class="hero-body">
+          <h1 id="hero-title" class="hero-title">
+            Empowering Businesses with WordPress, PHP & Digital Growth
+          </h1>
+          <p class="hero-subtitle">
+            We craft WordPress and PHP solutions, boost SEO, optimize
+            performance, and create content that ranks.
+          </p>
+          <div class="hero-actions">
+            <a class="button neon-cta" href="services.html">Explore services</a>
+            <a class="button ghost-btn" href="portfolio.html">See our work</a>
           </div>
+        </div>
+        <div class="hero-visual">
+           <img
+            src="assets/media/hero-bg.png" class="hero-image"
+            alt="Illustration showing web development and SEO concepts"
+          />
         </div>
       </section>
 
