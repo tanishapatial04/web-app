@@ -218,6 +218,14 @@
     }, interval);
   }
 
+  function initHyperspeedBackground() {
+    if (typeof initHyperspeedBackground !== 'undefined') {
+      setTimeout(() => {
+        window.initHyperspeedBackground('hyperspeed-container');
+      }, 100);
+    }
+  }
+
   function initPortfolioFilters() {
     const grid = document.getElementById("portfolioGrid");
     if (!grid) return;
@@ -257,6 +265,7 @@
     initClock();
     initReveal();
     initHeroTilt();
+    initHyperspeedBackground();
     initSlider();
     initPortfolioFilters();
     initBlogFilters();
