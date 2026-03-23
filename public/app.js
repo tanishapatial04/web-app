@@ -7,8 +7,15 @@
         fetch("/partials/header.html")
           .then((r) => r.text())
           .then((html) => {
-            slot.outerHTML = html;
+            try {
+              if (slot && slot.parentNode) {
+                slot.outerHTML = html;
+              }
+            } catch (e) {
+              console.warn('Error setting header outerHTML:', e);
+            }
           })
+          .catch(e => console.warn('Error fetching header:', e))
       );
     });
     document.querySelectorAll('[data-include="footer"]').forEach((slot) => {
@@ -16,8 +23,15 @@
         fetch("/partials/footer.html")
           .then((r) => r.text())
           .then((html) => {
-            slot.outerHTML = html;
+            try {
+              if (slot && slot.parentNode) {
+                slot.outerHTML = html;
+              }
+            } catch (e) {
+              console.warn('Error setting footer outerHTML:', e);
+            }
           })
+          .catch(e => console.warn('Error fetching footer:', e))
       );
     });
     await Promise.all(tasks);
@@ -219,10 +233,9 @@
   }
 
   function initHyperspeedBackground() {
-    if (typeof initHyperspeedBackground !== 'undefined') {
-      setTimeout(() => {
-        window.initHyperspeedBackground('hyperspeed-container');
-      }, 100);
+    // Wait for DOM to be fully ready and Three.js to be available
+    if (window.initHyperspeedBackground && typeof window.initHyperspeedBackground === 'function') {
+      window.initHyperspeedBackground('hyperspeed-container');
     }
   }
 

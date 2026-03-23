@@ -33,7 +33,15 @@
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <script src="https://cdn.jsdelivr.net/npm/three@r128/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/postprocessing@6/build/postprocessing.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS when available
+      window.addEventListener('DOMContentLoaded', function() {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('YOUR_PUBLIC_KEY');
+        }
+      });
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,7 +65,7 @@
     }
     </script>
     <script src="/analytics.js" defer></script>
-    <script src="/hyperspeed-bg.js" defer></script>
+    <script src="/hyperspeed-bg.js"></script>
     <script src="/app.js" defer></script>
   </head>
   <body>

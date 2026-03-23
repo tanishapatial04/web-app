@@ -1,8 +1,27 @@
 // Simple Hyperspeed-like animated background using Three.js
 (function() {
   let scene, camera, renderer, mesh, animationFrameId;
+  let hyperspeedInstance = null;
+
+  // Wait for Three.js to be available
+  function waitForThree(callback, maxAttempts = 50) {
+    let attempts = 0;
+    const checkThree = setInterval(() => {
+      attempts++;
+      if (typeof THREE !== 'undefined') {
+        clearInterval(checkThree);
+        callback();
+      } else if (attempts >= maxAttempts) {
+        clearInterval(checkThree);
+        console.warn('Three.js failed to load after 5 seconds');
+        callback(); // Proceed anyway (will use fallback)
+      }
+    }, 100);
+  }
 
   window.initHyperspeedBackground = function(containerId) {
+    if (hyperspeedInstance) return hyperspeedInstance;
+    
     const container = document.getElementById(containerId);
     if (!container) {
       console.error(`Container "${containerId}" not found`);
@@ -11,8 +30,9 @@
 
     // Check if Three.js is available
     if (typeof THREE === 'undefined') {
-      console.warn('Three.js is not loaded. Using fallback background.');
-      container.style.background = 'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(167,139,250,0.1))';
+      console.warn('Three.js is not loaded yet. Using fallback background.');
+      container.style.background = 'linear-gradient(135deg, rgba(59,130,246,0.15), rgba(167,139,250,0.15))';
+      container.style.minHeight = '600px';
       return null;
     }
 
@@ -23,8 +43,8 @@
       scene.fog = new THREE.Fog(0x0b0f1a, 100, 500);
 
       // Setup camera
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+      const width = Math.max(container.clientWidth, 1);
+      const height = Math.max(container.clientHeight, 1);
       camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
       camera.position.z = 30;
 
@@ -63,15 +83,15 @@
 
       // Floating particles/lights
       const particleGeo = new THREE.IcosahedronGeometry(0.5, 3);
-      const particleMaterial = new THREE.MeshPhongMaterial({
-        color: 0x03b3c3,
-        emissive: 0x03b3c3,
-        shininess: 100
-      });
-
       const particles = [];
+      
       for (let i = 0; i < 15; i++) {
-        const particle = new THREE.Mesh(particleGeo, particleMaterial.clone());
+        const particleMaterial = new THREE.MeshPhongMaterial({
+          color: 0x03b3c3,
+          emissive: 0x03b3c3,
+          shininess: 100
+        });
+        const particle = new THREE.Mesh(particleGeo, particleMaterial);
         particle.position.set(
           (Math.random() - 0.5) * 60,
           (Math.random() - 0.5) * 40,
@@ -115,16 +135,18 @@
 
         // Animate plane wave
         const posAttribute = planeGeo.getAttribute('position');
-        const posArray = posAttribute.array;
-        const time = Date.now() * 0.001;
+        if (posAttribute) {
+          const posArray = posAttribute.array;
+          const time = Date.now() * 0.001;
 
-        for (let i = 0; i < posArray.length; i += 3) {
-          const x = posArray[i];
-          const y = posArray[i + 1];
-          const z = Math.sin(x * 0.1 + time) * Math.cos(y * 0.05 + time) * 2;
-          posArray[i + 2] = z;
+          for (let i = 0; i < posArray.length; i += 3) {
+            const x = posArray[i];
+            const y = posArray[i + 1];
+            const z = Math.sin(x * 0.1 + time) * Math.cos(y * 0.05 + time) * 2;
+            posArray[i + 2] = z;
+          }
+          posAttribute.needsUpdate = true;
         }
-        posAttribute.needsUpdate = true;
 
         // Animate particles
         particles.forEach(p => {
@@ -138,6 +160,7 @@
         });
 
         // Subtle camera movement
+        const time = Date.now() * 0.001;
         camera.position.x = Math.sin(time * 0.1) * 5;
         camera.position.y = Math.cos(time * 0.1) * 3;
         camera.lookAt(0, 0, 0);
@@ -162,8 +185,7 @@
       // Start animation
       animate();
 
-      // Return cleanup function
-      return {
+      hyperspeedInstance = {
         dispose() {
           window.removeEventListener('resize', onWindowResize);
           cancelAnimationFrame(animationFrameId);
@@ -175,11 +197,24 @@
         }
       };
 
+      return hyperspeedInstance;
+
     } catch (error) {
       console.error('Error initializing Hyperspeed background:', error);
       // Fallback to gradient
       container.style.background = 'linear-gradient(135deg, rgba(59,130,246,0.15), rgba(167,139,250,0.15))';
+      container.style.minHeight = '600px';
       return null;
     }
   };
+
+  // Auto-init if container exists on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    waitForThree(() => {
+      const container = document.getElementById('hyperspeed-container');
+      if (container && window.initHyperspeedBackground) {
+        window.initHyperspeedBackground('hyperspeed-container');
+      }
+    });
+  });
 })();
