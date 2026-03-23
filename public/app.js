@@ -176,7 +176,7 @@
     const target = document.getElementById("rotating-testimonials-tag");
     if (!target) return;
 
-    const texts = ["React", "Bits", "Is", "Cool!"];
+    const texts = ["about us", "about our work", "about our dedication"];
     const interval = 2000;
     const transitionDuration = 250;
     let current = 0;
